@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true"
     tools:context=".UserCheckActivity">
 
     <LinearLayout
@@ -55,7 +57,7 @@
             android:id="@+id/user_check_manager_btn"
             android:layout_width="140dp"
             android:layout_height="140dp"
-            android:background="@drawable/user_check_btn"
+            android:background="@drawable/user_check_btn_case"
             android:src="@drawable/ic_administrator_solid"
             />
 
@@ -63,7 +65,7 @@
             android:id="@+id/user_check_user_btn"
             android:layout_width="140dp"
             android:layout_height="140dp"
-            android:background="@drawable/user_check_btn"
+            android:background="@drawable/user_check_btn_case"
             android:layout_marginStart="50dp"
             android:src="@drawable/ic_user_solid" />
 
@@ -87,16 +89,16 @@
             android:text="관리자"
             android:fontFamily="@font/nanumsquareeb"
             android:textColor="@color/font_gray"
-            android:textSize="20sp"/>
+            android:textSize="15sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="사용자"
-            android:layout_marginStart="137dp"
+            android:layout_marginStart="153dp"
             android:fontFamily="@font/nanumsquareeb"
             android:textColor="@color/font_gray"
-            android:textSize="20sp"/>
+            android:textSize="15sp"/>
 
 
     </LinearLayout>
@@ -113,7 +115,7 @@
         android:textSize="20sp"
         android:layout_marginStart="60dp"
         android:layout_marginEnd="60dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="140dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/user_check_btn_layout"
@@ -149,6 +151,7 @@
             android:layout_marginTop="80dp" />
 
         <TextView
+            android:id="@+id/user_check_sign_in_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="회원가입하기"

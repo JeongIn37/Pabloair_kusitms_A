@@ -14,7 +14,7 @@
     <!--font color -->
     <color name="font_gray">#939393</color>
     <color name="font_black">#252525</color>
-    <color name="font_blue">#288F88</color>
+    <color name="font_blue">#288FB8</color>
     <color name="font_cyan">#192D61</color>
 
 </resources>
