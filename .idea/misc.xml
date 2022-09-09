@@ -6,10 +6,13 @@
         <entry key="..\:/Android/Pabloair_kusitms_A/app/src/main/res/layout/activity_main.xml" value="0.17708333333333334" />
         <entry key="..\:/Android/Pabloair_kusitms_A/app/src/main/res/layout/activity_splash.xml" value="0.264" />
         <entry key="..\:/Android/Pabloair_kusitms_A/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.259" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A/app/src/main/res/layout/activity_splash.xml" value="0.16666666666666666" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A/app/src/main/res/layout/activity_user_check.xml" value="0.23333333333333334" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
