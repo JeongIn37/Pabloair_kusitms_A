@@ -20,7 +20,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private class SplashHandler implements Runnable {
         public void run() {
-            startActivity(new Intent(getApplication(), MainActivity.class));
+            startActivity(new Intent(getApplication(), UserCheckActivity.class));
             SplashActivity.this.finish();
         }
     }
