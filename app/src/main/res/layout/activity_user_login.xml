@@ -6,15 +6,147 @@
     android:layout_height="match_parent"
     tools:context=".User_Login_Activity">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/allivery_logo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="USER LOGIM 창"
-        android:fontFamily="@font/nanumsquareeb"
-        android:textColor="@color/black"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquare_acb"
+            android:text="A"
+            android:textColor="@color/font_blue"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="92dp"
+            android:fontFamily="@font/nanumsquare_acb"
+            android:text="LLIVERY"
+            android:textColor="@color/font_cyan"
+            android:textSize="48sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/allivery_logo"
+        tools:layout_editor_absoluteX="-2dp">
+
+
+        <EditText
+            android:id="@+id/login_id"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/form_box"
+            android:ems="10"
+            android:fontFamily="@font/nanumsquareb"
+            android:hint="아이디"
+            android:text=""
+            android:textColor="@color/font_gray"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/login_pwd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.928"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/login_pwd"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="180dp"
+            android:background="@drawable/form_box"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:textColor="@color/font_gray"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/login_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/login_options"
+            android:layout_width="302dp"
+            android:layout_height="34dp"
+            app:layout_constraintBottom_toTopOf="@+id/login_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_pwd"
+            app:layout_constraintVertical_bias="0.155"
+            tools:ignore="MissingConstraints">
+
+
+            <CheckBox
+                android:id="@+id/login_maintenance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquareb"
+                android:text="로그인 상태 유지"
+                android:buttonTint="@color/main_blue"
+                android:textColor="@color/font_black"
+                tools:layout_editor_absoluteX="3dp"
+                tools:layout_editor_absoluteY="407dp" />
+
+            <TextView
+                android:id="@+id/search_pwd"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquareb"
+                android:gravity="right"
+                android:text="비밀번호를 잊으셨나요?"
+                android:textColor="@color/font_light_gray"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="198dp"
+                tools:layout_editor_absoluteY="417dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginBottom="128dp"
+            android:background="@drawable/next_blue_radius_btn"
+            android:fontFamily="@font/nanumsquareeb"
+            android:text="로그인"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_check_btn_layout"
+            tools:ignore="NotSibling" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,15 +6,104 @@
     android:layout_height="match_parent"
     tools:context=".Manager_login_Activity">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/allivery_logo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="MANAGER LOGIM 창"
-        android:fontFamily="@font/nanumsquareeb"
-        android:textColor="@color/black"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquare_acb"
+            android:text="A"
+            android:textColor="@color/font_blue"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="92dp"
+            android:fontFamily="@font/nanumsquare_acb"
+            android:text="LLIVERY"
+            android:textColor="@color/font_cyan"
+            android:textSize="48sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/allivery_logo"
+        tools:layout_editor_absoluteX="-2dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/nanumsquareeb"
+            android:text="관리자 번호"
+            android:textColor="@color/font_dark_gray"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@+id/login_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.197"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/login_id"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/form_box"
+            android:ems="10"
+            android:fontFamily="@font/nanumsquareb"
+            android:text=""
+            android:textColor="@color/font_light_gray"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/login_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.7"
+            tools:ignore="MissingConstraints,NotSibling" />
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginBottom="128dp"
+            android:background="@drawable/next_blue_radius_btn"
+            android:fontFamily="@font/nanumsquareeb"
+            android:text="로그인"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_check_btn_layout"
+            tools:ignore="NotSibling" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

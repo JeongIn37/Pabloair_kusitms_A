@@ -2,15 +2,14 @@ package com.example.pabloair_kusitms_a;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Layout;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class UserCheckActivity extends AppCompatActivity {
 
@@ -63,6 +62,16 @@ public class UserCheckActivity extends AppCompatActivity {
                     startActivity(new Intent(getApplication(), Manager_login_Activity.class));
                 }
 
+            }
+        });
+
+        TextView signupText = (TextView) findViewById(R.id.to_signup);
+        signupText.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), User_Signup_Activity.class);
+                startActivity(intent);
             }
         });
 

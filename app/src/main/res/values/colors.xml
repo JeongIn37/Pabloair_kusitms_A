@@ -16,5 +16,8 @@
     <color name="font_black">#252525</color>
     <color name="font_blue">#288F88</color>
     <color name="font_cyan">#192D61</color>
+    <color name="font_light_gray">#CCCCCC</color>
+    <color name="font_dark_gray">#535353</color>
+
 
 </resources>
