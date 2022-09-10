@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -20,6 +22,9 @@ public class UserCheckActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_check);
 
+        Window window = getWindow();
+        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
 
         ImageButton ManagerBtn = findViewById(R.id.user_check_manager_btn);
         ImageButton UserBtn = findViewById(R.id.user_check_user_btn);
@@ -31,12 +36,22 @@ public class UserCheckActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(v == UserBtn) {
+                    UserBtn.setSelected(true);
+                    UserBtn.setPressed(true);
+                    ManagerBtn.setSelected(false);
+                    ManagerBtn.setSelected(false);
+
                     BottomLayout.setVisibility(View.INVISIBLE);
                     NextBtn.setVisibility(View.VISIBLE);
                     UserType = "사용자";
                     Log.d("UserType", UserType);
 
                 } else if(v == ManagerBtn) {
+                    UserBtn.setSelected(false);
+                    UserBtn.setPressed(false);
+                    ManagerBtn.setSelected(true);
+                    ManagerBtn.setSelected(true);
+
                     BottomLayout.setVisibility(View.INVISIBLE);
                     NextBtn.setVisibility(View.VISIBLE);
                     UserType = "관리자";
@@ -47,7 +62,6 @@ public class UserCheckActivity extends AppCompatActivity {
 
         UserBtn.setOnClickListener(layoutVisible);
         ManagerBtn.setOnClickListener(layoutVisible);
-
 
 
         NextBtn.setOnClickListener(new View.OnClickListener() {
@@ -65,12 +79,12 @@ public class UserCheckActivity extends AppCompatActivity {
             }
         });
 
-        TextView signupText = (TextView) findViewById(R.id.to_signup);
+        TextView signupText = (TextView) findViewById(R.id.user_check_sign_in_tv);
         signupText.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), User_Signup_Activity.class);
+                Intent intent = new Intent(getApplicationContext(), User_Signin_Activity.class);
                 startActivity(intent);
             }
         });
