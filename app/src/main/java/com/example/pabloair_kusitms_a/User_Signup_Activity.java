@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-public class User_Signin_Activity extends AppCompatActivity {
+public class User_Signup_Activity extends AppCompatActivity {
 
     ImageView back;
     EditText id, pwd, name, phone;
@@ -20,7 +20,7 @@ public class User_Signin_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_signin);
+        setContentView(R.layout.activity_user_signup);
 
         //뒤로 가기 버튼
         back = findViewById(R.id.ic_backward);
@@ -46,7 +46,7 @@ public class User_Signin_Activity extends AppCompatActivity {
 
             // 회원가입 공란, 아이디 중복 메시지 처리
             if (TextUtils.isEmpty(user_id) || TextUtils.isEmpty(user_pwd) || TextUtils.isEmpty(user_name) || TextUtils.isEmpty(user_phone)){
-                Toast.makeText(User_Signin_Activity.this, "모든 값을 입력해야 합니다.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(User_Signup_Activity.this, "모든 값을 입력해야 합니다.", Toast.LENGTH_SHORT).show();
             }
             else{
                 Boolean checkUser = DB.checkUserId(user_id);
@@ -55,14 +55,14 @@ public class User_Signin_Activity extends AppCompatActivity {
                     Boolean insert = DB.insertData(user_id, user_pwd, user_name, user_phone);
                     // 회원가입
                     if (insert == true){
-                        Toast.makeText(User_Signin_Activity.this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(User_Signup_Activity.this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(this, User_Login_Activity.class);
                         startActivity(intent);
                     } else {
-                        Toast.makeText(User_Signin_Activity.this, "회원가입에 실패했습니다.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(User_Signup_Activity.this, "회원가입에 실패했습니다.", Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    Toast.makeText(User_Signin_Activity.this, "이미 등록된 아이디입니다.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(User_Signup_Activity.this, "이미 등록된 아이디입니다.", Toast.LENGTH_SHORT).show();
                 }
             }
 

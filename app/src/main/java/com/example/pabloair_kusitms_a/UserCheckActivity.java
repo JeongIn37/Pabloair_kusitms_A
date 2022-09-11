@@ -84,7 +84,7 @@ public class UserCheckActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), User_Signin_Activity.class);
+                Intent intent = new Intent(getApplicationContext(), User_Signup_Activity.class);
                 startActivity(intent);
             }
         });
