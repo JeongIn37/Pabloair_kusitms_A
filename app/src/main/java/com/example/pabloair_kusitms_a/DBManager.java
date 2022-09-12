@@ -16,7 +16,13 @@ public class DBManager extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE User(id TEXT PRIMARY KEY, pwd TEXT, name TEXT, phone INTEGER);");
-        db.execSQL("CREATE TABLE OrderList(id TEXT PRIMARY KEY , serialNum TEXT, perform INTEGER);");
+        db.execSQL("CREATE TABLE OrderList(id INTEGER PRIMARY KEY AUTOINCREMENT, userId TEXT , serialNum TEXT, perform INTEGER);");
+        db.execSQL("INSERT INTO User VALUES ('pabloair', '1234567', '파블로항공', '010-1234-5678')");
+        db.execSQL("INSERT INTO OrderList (userId, serialNum, perform) VALUES ('pabloair', 'A20220907AXC03', 0)");
+        db.execSQL("INSERT INTO OrderList (userId, serialNum, perform) VALUES ('pabloair', 'A20220911B12DX', 0)");
+        db.execSQL("INSERT INTO OrderList (userId, serialNum, perform) VALUES ('pabloair', 'A20220912CK782', 1)");
+        db.execSQL("INSERT INTO OrderList (userId, serialNum, perform) VALUES ('pabloair', 'A2022091208FVX', 1)");
+        db.execSQL("INSERT INTO OrderList (userId, serialNum, perform) VALUES ('pabloair', 'A20220911AXC03', 2)");
     }
 
     @Override

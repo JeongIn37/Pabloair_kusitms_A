@@ -16,11 +16,16 @@ import android.widget.TextView;
 public class UserCheckActivity extends AppCompatActivity {
 
     String UserType = "";
+    DBManager DB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_check);
+
+        // 더미데이터 생성을 위한 DB 호출용
+        DB = new DBManager(this);
+
 
         Window window = getWindow();
         window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);

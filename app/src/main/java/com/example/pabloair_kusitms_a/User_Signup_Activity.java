@@ -5,15 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class User_Signup_Activity extends AppCompatActivity {
 
     ImageView back;
     EditText id, pwd, name, phone;
+    TextView id_text, pw_text;
     Button signup_btn;
     DBManager DB;
 
@@ -34,6 +37,14 @@ public class User_Signup_Activity extends AppCompatActivity {
 
         DB = new DBManager(this);
 
+        //아이디, 비밀번호 확인 텍스트
+        id_text = findViewById(R.id.signup_exist_user);
+        pw_text = findViewById(R.id.signup_invalid_pwd);
+
+        id_text.setVisibility(View.INVISIBLE);
+        pw_text.setVisibility(View.INVISIBLE);
+
+
         //회원가입 완료 버튼
         signup_btn = findViewById(R.id.signup_btn);
 
@@ -52,17 +63,21 @@ public class User_Signup_Activity extends AppCompatActivity {
                 Boolean checkUser = DB.checkUserId(user_id);
                 // id가 존재하지 않으면 회원가입 진행
                 if(checkUser == false){
-                    Boolean insert = DB.insertData(user_id, user_pwd, user_name, user_phone);
-                    // 회원가입
-                    if (insert == true){
-                        Toast.makeText(User_Signup_Activity.this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(this, User_Login_Activity.class);
-                        startActivity(intent);
+                    if (user_pwd.length() < 7 || user_pwd.length() > 15){
+                        pw_text.setVisibility(View.VISIBLE);
                     } else {
-                        Toast.makeText(User_Signup_Activity.this, "회원가입에 실패했습니다.", Toast.LENGTH_SHORT).show();
+                        Boolean insert = DB.insertData(user_id, user_pwd, user_name, user_phone);
+                        // 회원가입
+                        if (insert == true){
+                            Toast.makeText(User_Signup_Activity.this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(this, User_Login_Activity.class);
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(User_Signup_Activity.this, "회원가입에 실패했습니다.", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 } else {
-                    Toast.makeText(User_Signup_Activity.this, "이미 등록된 아이디입니다.", Toast.LENGTH_SHORT).show();
+                    id_text.setVisibility(View.VISIBLE);
                 }
             }
 
@@ -70,4 +85,6 @@ public class User_Signup_Activity extends AppCompatActivity {
         });
 
     }
+
+
 }
