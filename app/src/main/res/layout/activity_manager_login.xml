@@ -77,7 +77,7 @@
             android:text=""
             android:textColor="@color/font_light_gray"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@id/login_btn"
+            app:layout_constraintBottom_toTopOf="@id/manager_login_btn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +86,7 @@
             tools:ignore="MissingConstraints,NotSibling" />
 
         <Button
-            android:id="@+id/login_btn"
+            android:id="@+id/manager_login_btn"
             android:layout_width="290dp"
             android:layout_height="50dp"
             android:layout_marginTop="160dp"
