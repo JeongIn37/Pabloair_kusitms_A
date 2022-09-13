@@ -25,6 +25,7 @@ import com.google.android.gms.vision.barcode.BarcodeDetector;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+
 import java.io.IOException;
 import java.security.acl.Permission;
 
@@ -48,13 +49,14 @@ public class Manager_Scan_Activity extends AppCompatActivity {
             //권한 요청 코드
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, SINGLE_PERMISSION);
         } else {
-
+            //권한 O시 실행할 코드
             barcodeDetector = new BarcodeDetector.Builder(getApplicationContext())
                     .setBarcodeFormats(Barcode.QR_CODE).build();
 
             textView = (TextView)findViewById(R.id.qrCode_text);
             surfaceView = findViewById(R.id.surfaceView);
 
+            //카메라 - 바코드리더 연결
             cameraSource = new CameraSource.Builder(getApplicationContext(), barcodeDetector)
                     .setRequestedPreviewSize(640,400).build();
 
@@ -76,10 +78,12 @@ public class Manager_Scan_Activity extends AppCompatActivity {
 
                 @Override
                 public void surfaceChanged(@NonNull SurfaceHolder holder, int format, int width, int height) {
+                    Log.d("Surface State", "Changed");
                 }
 
                 @Override
                 public void surfaceDestroyed(@NonNull SurfaceHolder holder) {
+                    Log.d("Surface State", "Destroyed");
                 }
             });
 
@@ -94,6 +98,7 @@ public class Manager_Scan_Activity extends AppCompatActivity {
                     if(qrcode.size() != 0) {
                         textView.post(new Runnable() {
                             @Override
+                            //QR 코드 값을 TextView에 띄움
                             public void run() {
                                 textView.setText(qrcode.valueAt(0).displayValue);
                             }
@@ -107,8 +112,18 @@ public class Manager_Scan_Activity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
         super.onActivityResult(requestCode, resultCode, data);
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if(result != null) {
+            if(result.getContents() == null) {
+                Toast.makeText(this, "QR인식이 잘못되었습니다", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "주문번호: " + result.getContents() + "잠금 해제 완료", Toast.LENGTH_LONG).show();
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+
     }
 
 }
