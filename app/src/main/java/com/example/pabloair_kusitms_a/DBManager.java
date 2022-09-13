@@ -15,14 +15,23 @@ public class DBManager extends SQLiteOpenHelper {
     /* 새로운 테이블 생성 */
     @Override
     public void onCreate(SQLiteDatabase db) {
+        /* User Table */
         db.execSQL("CREATE TABLE User(id TEXT PRIMARY KEY, pwd TEXT, name TEXT, phone INTEGER);");
-        db.execSQL("CREATE TABLE OrderList(id INTEGER PRIMARY KEY AUTOINCREMENT, userId TEXT , serialNum TEXT, perform INTEGER);");
         db.execSQL("INSERT INTO User VALUES ('pabloair', '1234567', '파블로항공', '010-1234-5678')");
+
+        /* OrderList Table */
+        db.execSQL("CREATE TABLE OrderList(id INTEGER PRIMARY KEY AUTOINCREMENT, userId TEXT , serialNum TEXT, perform INTEGER);");
         db.execSQL("INSERT INTO OrderList (userId, serialNum, perform) VALUES ('pabloair', 'A20220907AXC03', 0)");
         db.execSQL("INSERT INTO OrderList (userId, serialNum, perform) VALUES ('pabloair', 'A20220911B12DX', 0)");
         db.execSQL("INSERT INTO OrderList (userId, serialNum, perform) VALUES ('pabloair', 'A20220912CK782', 1)");
         db.execSQL("INSERT INTO OrderList (userId, serialNum, perform) VALUES ('pabloair', 'A2022091208FVX', 1)");
         db.execSQL("INSERT INTO OrderList (userId, serialNum, perform) VALUES ('pabloair', 'A20220911AXC03', 2)");
+
+        /* Administrator Table */
+        db.execSQL("CREATE TABLE Admin(adminId TEXT PRIMARY KEY);");
+        db.execSQL("INSERT INTO Admin VALUES ('yujeong00');");
+        db.execSQL("INSERT INTO Admin VALUES ('jeongin99');");
+        db.execSQL("INSERT INTO Admin VALUES ('minseo00');");
     }
 
     @Override
@@ -77,24 +86,14 @@ public class DBManager extends SQLiteOpenHelper {
         }
     }
 
-
-//    public void insert(String _query) {
-//        SQLiteDatabase db = getWritableDatabase();
-//        db.execSQL(_query);
-//        db.close();
-//    }
-//
-//
-//    public void update(String _query) {
-//        SQLiteDatabase db = getWritableDatabase();
-//        db.execSQL(_query);
-//        db.close();
-//    }
-//
-//    public void delete(String _query) {
-//        SQLiteDatabase db = getWritableDatabase();
-//        db.execSQL(_query);
-//        db.close();
-//    }
+    public Boolean checkAdmin(String adminId){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from Admin where adminId=?", new String[] {adminId});
+        if (cursor.getCount() > 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }
