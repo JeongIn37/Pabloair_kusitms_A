@@ -21,7 +21,7 @@ public class Manager_login_Activity extends AppCompatActivity {
         LoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplication(), Manager_home_Activity.class);
+                Intent intent = new Intent(getApplication(), DoorManageActivity.class);
                 startActivity(intent);
                 Manager_login_Activity.this.finish();
             }
