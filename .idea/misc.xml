@@ -3,12 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/Pabloair_kusitms_A/app/src/main/res/layout/activity_home.xml" value="0.25364583333333335" />
         <entry key="..\:/Android/Pabloair_kusitms_A/app/src/main/res/layout/activity_main.xml" value="0.17708333333333334" />
         <entry key="..\:/Android/Pabloair_kusitms_A/app/src/main/res/layout/activity_manager_home.xml" value="0.12314814814814815" />
         <entry key="..\:/Android/Pabloair_kusitms_A/app/src/main/res/layout/activity_manager_login.xml" value="0.12314814814814815" />
+        <entry key="..\:/Android/Pabloair_kusitms_A/app/src/main/res/layout/activity_manager_open.xml" value="0.2" />
         <entry key="..\:/Android/Pabloair_kusitms_A/app/src/main/res/layout/activity_manager_scan.xml" value="0.12314814814814815" />
         <entry key="..\:/Android/Pabloair_kusitms_A/app/src/main/res/layout/activity_splash.xml" value="0.264" />
-        <entry key="..\:/Android/Pabloair_kusitms_A/app/src/main/res/layout/activity_user_check.xml" value="0.12314814814814815" />
+        <entry key="..\:/Android/Pabloair_kusitms_A/app/src/main/res/layout/activity_user_check.xml" value="0.264" />
         <entry key="..\:/Android/Pabloair_kusitms_A/app/src/main/res/layout/activity_user_login.xml" value="0.264" />
         <entry key="..\:/Android/Pabloair_kusitms_A/app/src/main/res/layout/activity_user_signup.xml" value="0.25364583333333335" />
         <entry key="..\:/Android/Pabloair_kusitms_A/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.259" />
