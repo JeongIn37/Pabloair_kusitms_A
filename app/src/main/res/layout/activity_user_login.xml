@@ -129,7 +129,7 @@
                 android:textSize="12sp"
                 tools:layout_editor_absoluteX="198dp"
                 tools:layout_editor_absoluteY="417dp" />
-         </LinearLayout>
+        </LinearLayout>
 
         <Button
             android:id="@+id/login_btn"

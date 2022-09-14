@@ -36,6 +36,9 @@
             android:name=".DoorManageActivity"
             android:exported="false" />
         <activity
+            android:name=".ManagerOpenActivity"
+            android:exported="false" />
+        <activity
             android:name=".Manager_Scan_Activity"
             android:exported="false" />
         <activity

@@ -38,10 +38,17 @@
         <entry key="app/src/main/res/layout/activity_create_qrcode.xml" value="0.16032608695652173" />
         <entry key="app/src/main/res/layout/activity_door_manage.xml" value="0.16032608695652173" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.15552178318135765" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.23217926025390628" />
+        <entry key="app/src/main/res/layout/activity_main_mypage.xml" value="0.16032608695652173" />
+        <entry key="app/src/main/res/layout/activity_main_order.xml" value="0.16032608695652173" />
+        <entry key="app/src/main/res/layout/activity_main_orderList.xml" value="0.16032608695652173" />
+        <entry key="app/src/main/res/layout/activity_main_orderlist.xml" value="0.12092391304347826" />
+        <entry key="app/src/main/res/layout/activity_main_search.xml" value="0.16032608695652173" />
         <entry key="app/src/main/res/layout/activity_manager_home.xml" value="0.13774871826171875" />
         <entry key="app/src/main/res/layout/activity_manager_login.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_manager_open.xml" value="0.16032608695652173" />
         <entry key="app/src/main/res/layout/activity_manager_scan.xml" value="0.16032608695652173" />
+        <entry key="app/src/main/res/layout/activity_scan_home.xml" value="0.16032608695652173" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.32083333333333336" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_user_check.xml" value="0.33" />
