@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 public class User_Login_Activity extends AppCompatActivity {
@@ -41,7 +40,7 @@ public class User_Login_Activity extends AppCompatActivity {
                 Boolean checkIdPwd = DB.checkIdPwd(user_id, user_pwd);
                 if(checkIdPwd == true){
                     Toast.makeText(User_Login_Activity.this, "로그인 성공!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(this, HomeActivity.class);
+                    Intent intent = new Intent(this, Home_Scan_Activity.class);
                     startActivity(intent);
                 } else {
                     Toast.makeText(User_Login_Activity.this, "잘못된 아이디 또는 비밀번호입니다.", Toast.LENGTH_SHORT).show();

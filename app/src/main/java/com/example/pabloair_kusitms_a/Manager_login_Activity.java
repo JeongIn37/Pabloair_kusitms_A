@@ -35,7 +35,7 @@ public class Manager_login_Activity extends AppCompatActivity {
                 Boolean checkAdmin = DBManager.checkAdmin(adminId);
                 if (checkAdmin == true) {
                     Toast.makeText(Manager_login_Activity.this, "관리자 인증에 성공했습니다.", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(this, Manager_home_Activity.class);
+                    Intent intent = new Intent(this, DoorManageActivity.class);
                     startActivity(intent);
 
                 } else {
