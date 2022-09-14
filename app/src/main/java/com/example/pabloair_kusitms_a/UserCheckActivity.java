@@ -78,7 +78,7 @@ public class UserCheckActivity extends AppCompatActivity {
 
                 } else if (UserType.equals("관리자")) {
 
-                    startActivity(new Intent(getApplication(), Manager_login_Activity.class));
+                    startActivity(new Intent(getApplication(), Manager_home_Activity.class));
                 }
 
             }
