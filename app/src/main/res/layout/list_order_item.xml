@@ -1,0 +1,55 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <ImageView
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:src="@drawable/rectangle_list_item_photo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="상품이동중 (중량 8kg)"
+            android:fontFamily="@font/nanumsquarer"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="예상 시간(40분)"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textColor="@color/font_gray"
+            android:textSize="15sp"
+            android:fontFamily="@font/nanumsquarer"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="스테이션 이동완료"
+            android:fontFamily="@font/nanumsquarer"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

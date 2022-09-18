@@ -1,0 +1,192 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/listview_background"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <LinearLayout
+        android:id="@+id/list_order_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/list_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="김유정님 - "
+            android:fontFamily="@font/nanumsquareb"
+            android:textSize="13sp"
+            android:textColor="@color/font_gray" />
+
+        <TextView
+            android:id="@+id/list_orderNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주문번호 A20220907AXC03"
+            android:fontFamily="@font/nanumsquareeb"
+            android:textSize="13sp"
+            android:textColor="@color/font_black" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가평 남이선 A1 스테이션"
+            android:fontFamily="@font/nanumsquare_aceb"
+            android:textColor="@color/font_black"
+            android:textSize="20sp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/list_QrCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/listview_qrcode" />
+
+    </LinearLayout>
+
+    <!--구분선-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/font_light_gray"
+        android:paddingStart="1dp"
+        android:paddingEnd="1dp"
+        android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:id="@+id/list_ongoing_layout_horz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/list_ongoing_iv_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/list_ongoing_iv1"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/elipse_blue_fill"/>
+
+            <View
+                android:id="@+id/list_ongoing_arrow1"
+                android:layout_width="4dp"
+                android:layout_height="25dp"
+                android:background="@color/main_blue"/>
+
+            <ImageView
+                android:id="@+id/list_ongoing_iv2"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/elipse_blue_nonfill"/>
+
+            <View
+                android:id="@+id/list_ongoing_arrow2"
+                android:layout_width="4dp"
+                android:layout_height="25dp"
+                android:background="#cccccc"/>
+
+            <ImageView
+                android:id="@+id/list_ongoing_iv3"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/elipse_gray_nonfill"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상품이동중 (중량 8kg)"
+                android:fontFamily="@font/nanumsquarer"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예상 시간(40분)"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textColor="@color/font_gray"
+                android:textSize="15sp"
+                android:fontFamily="@font/nanumsquarer"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="스테이션 이동완료"
+                android:fontFamily="@font/nanumsquarer"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
