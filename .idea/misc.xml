@@ -34,14 +34,18 @@
         <entry key="app/src/main/res/drawable/ic_administrator_solid.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.4" />
         <entry key="app/src/main/res/drawable/ic_user_solid.xml" value="0.1425" />
+        <entry key="app/src/main/res/drawable/item_image_template.xml" value="0.1555" />
         <entry key="app/src/main/res/drawable/user_check_btn.xml" value="0.1425" />
+        <entry key="app/src/main/res/drawable/user_check_btn_case.xml" value="0.1555" />
+        <entry key="app/src/main/res/drawable/user_check_btn_pressed.xml" value="0.1555" />
         <entry key="app/src/main/res/layout/activity_create_qrcode.xml" value="0.16032608695652173" />
         <entry key="app/src/main/res/layout/activity_door_manage.xml" value="0.16032608695652173" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.15552178318135765" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23217926025390628" />
         <entry key="app/src/main/res/layout/activity_main_mypage.xml" value="0.16032608695652173" />
-        <entry key="app/src/main/res/layout/activity_main_order.xml" value="0.16032608695652173" />
+        <entry key="app/src/main/res/layout/activity_main_order.xml" value="0.17877044677734377" />
         <entry key="app/src/main/res/layout/activity_main_orderList.xml" value="0.16032608695652173" />
+        <entry key="app/src/main/res/layout/activity_main_order_detail.xml" value="0.2698440551757813" />
         <entry key="app/src/main/res/layout/activity_main_orderlist.xml" value="0.12092391304347826" />
         <entry key="app/src/main/res/layout/activity_main_search.xml" value="0.16032608695652173" />
         <entry key="app/src/main/res/layout/activity_manager_home.xml" value="0.13774871826171875" />

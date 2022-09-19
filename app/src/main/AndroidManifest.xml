@@ -24,6 +24,9 @@
             android:name=".Main_Search_Activity"
             android:exported="false" />
         <activity
+            android:name=".Main_Order_Detail_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Main_Order_List_Activity"
             android:exported="false" />
         <activity
