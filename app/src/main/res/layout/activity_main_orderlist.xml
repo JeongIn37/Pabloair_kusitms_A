@@ -50,7 +50,7 @@
     <LinearLayout
         android:id="@+id/listView_background"
         android:layout_width="match_parent"
-        android:layout_height="640dp"
+        android:layout_height="650dp"
         android:orientation="vertical"
         android:background="@drawable/home_activity_background"
         android:gravity="center_horizontal"
@@ -71,13 +71,14 @@
             android:layout_height="wrap_content"
             android:text="주문 조회"
             android:textSize="25sp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:fontFamily="@font/nanumsquareb"
             android:textColor="@color/font_cyan"/>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             tools:listitem="@layout/item_order"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_blue"
-    tools:context=".create_QRcodeActivity">
+    tools:context=".Create_QRcodeActivity">
 
 
     <ImageView
@@ -87,7 +87,7 @@
             android:id="@+id/user_qrCode_background"
             android:layout_width="300dp"
             android:layout_height="300dp"
-            android:src="@drawable/home_activity_btn"
+            android:background="@drawable/home_activity_btn"
             android:layout_marginTop="50dp"/>
 
         <TextView

@@ -5,6 +5,7 @@
     <!-- QR코드 스캔 권한 등록 1 : 카메라 허용 -->
     <uses-permission android:name="android.permission.CAMERA" />
 
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -32,7 +33,7 @@
             android:name=".Main_Order_Activity"
             android:exported="false" />
         <activity
-            android:name=".create_QRcodeActivity"
+            android:name=".Create_QRcodeActivity"
             android:exported="false" />
         <activity
             android:name=".DoorManageActivity"

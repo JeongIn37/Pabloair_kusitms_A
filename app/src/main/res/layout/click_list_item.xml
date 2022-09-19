@@ -4,15 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="12dp"
-    android:gravity="center_vertical"
+    android:padding="5dp"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent">
+    app:layout_constraintEnd_toEndOf="parent"
+    android:gravity="center_vertical" >
 
     <ImageView
-        android:layout_width="100px"
-        android:layout_height="100px"
-        android:src="@drawable/rectangle_list_item_photo"/>
+        android:id="@+id/click_list_productPhoto"
+        android:layout_width="110px"
+        android:layout_height="110px"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/order_galic"
+        android:background="@drawable/rectangle_list_item_photo"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,27 +24,31 @@
         android:orientation="vertical" >
 
         <TextView
+            android:id="@+id/click_list_productName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="상품이동중 (중량 8kg)"
+            android:text="청보 깐마늘 100g"
+            android:layout_marginBottom="5dp"
             android:fontFamily="@font/nanumsquarer"
             android:textSize="15sp"
             android:textColor="@color/black"/>
 
         <TextView
+            android:id="@+id/click_list_productAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="예상 시간(40분)"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
+            android:text="청보 깐마늘 100g 1개 (2390원)"
+            android:paddingBottom="10dp"
             android:textColor="@color/font_gray"
             android:textSize="15sp"
             android:fontFamily="@font/nanumsquarer"/>
 
         <TextView
+            android:id="@+id/click_list_productPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="스테이션 이동완료"
+            android:text="2390원"
+            android:paddingStart="2dp"
             android:fontFamily="@font/nanumsquarer"
             android:textColor="@color/black"
             android:textSize="15sp"/>

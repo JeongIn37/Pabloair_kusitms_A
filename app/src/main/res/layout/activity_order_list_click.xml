@@ -50,7 +50,7 @@
     <LinearLayout
         android:id="@+id/listView_background"
         android:layout_width="match_parent"
-        android:layout_height="640dp"
+        android:layout_height="650dp"
         android:orientation="vertical"
         android:background="@drawable/home_activity_background"
         android:gravity="center_horizontal"
@@ -70,46 +70,71 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="주문 상세 조회"
+            android:layout_marginBottom="15dp"
             android:textSize="25sp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/nanumsquareb"
             android:textColor="@color/font_cyan"/>
 
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="30dp"
-            android:layout_weight="1">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
 
-
-                <TextView
-                    android:id="@+id/click_list_orderNumber"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="30dp"
-                    android:paddingEnd="30dp"
-                    android:text="주문번호 A20220907AXC03"
-                    android:textColor="@color/font_dark_gray"
-                    android:fontFamily="@font/nanumsquareb"
-                    android:textSize="16sp" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingStart="30dp"
+                        android:gravity="center"
+                        android:text="주문번호 "
+                        android:textColor="@color/font_dark_gray"
+                        android:fontFamily="@font/nanumsquareb"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:id="@+id/click_list_orderNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="A20220907AXC03"
+                        android:textColor="@color/font_dark_gray"
+                        android:fontFamily="@font/nanumsquareb"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/click_list_qrcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/listview_qrcode"
+                        android:layout_marginEnd="30dp"/>
+
+                </LinearLayout>
+
 
                 <TextView
+                    android:id="@+id/click_list_station"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="가평군 농협 하나로마트 자라점"
-                    android:paddingTop="14dp"
                     android:paddingBottom="14dp"
                     android:paddingStart="30dp"
                     android:paddingEnd="30dp"
                     android:textColor="@color/font_black"
                     android:fontFamily="@font/nanumsquareeb"
                     android:textSize="20sp"/>
+
 
                 <TextView
                     android:layout_width="match_parent"
@@ -134,6 +159,7 @@
                     android:textColor="@color/font_dark_gray"/>
 
                 <TextView
+                    android:id="@+id/click_list_orderTime"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="30dp"
@@ -148,14 +174,14 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="4dp"
+                    android:layout_height="3dp"
                     android:background="#ebebeb"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp" />
 
 
-
                 <TextView
+                    android:id="@+id/click_list_orderName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="30dp"
@@ -167,6 +193,7 @@
                     android:paddingTop="14dp" />
 
                 <TextView
+                    android:id="@+id/click_list_orderInfo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="청보 깐마늘 100g 외 12개"
@@ -179,6 +206,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/click_list_orderPrice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="주문금액 : 87050원"
@@ -190,37 +218,24 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="4dp"
+                    android:layout_height="3dp"
                     android:background="#ebebeb"
                     android:layout_marginTop="14dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp" />
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/clickList_rv"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp"
-                    tools:listitem="@layout/list_order_item"/>
-
-
+                    android:layout_gravity="center"
+                    tools:listitem="@layout/click_list_item"/>
 
             </LinearLayout>
 
-
-        </ScrollView>
-
-
-
-
     </LinearLayout>
-
-
-
-
-
-
-
 
 
 

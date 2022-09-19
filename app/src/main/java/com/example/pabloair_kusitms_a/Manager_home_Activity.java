@@ -33,10 +33,6 @@ public class Manager_home_Activity extends AppCompatActivity {
 
         ImageButton ScanBtn = findViewById(R.id.manager_home_btn1);
         ImageButton ManageBtn = findViewById(R.id.manager_home_btn2);
-        Button QrLayoutBtn = findViewById(R.id.qrCode_layout_btn);
-
-        ImageView qrCode = (ImageView) findViewById(R.id.qrCode);
-        String SerialNumber = "A20220907AXC03";
 
         View.OnClickListener BtnEvent = new View.OnClickListener() {
             @Override
@@ -52,34 +48,11 @@ public class Manager_home_Activity extends AppCompatActivity {
                     startActivity(intent);
                     Log.d("Activity", "DoorManageActivity");
                 }
-                else if(v == QrLayoutBtn) {
-
-                    MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
-                    try {
-                        //QR Code 생성 (content -원하는 내용, format- 바코드 포맷형식, 가로, 세로)
-                        BitMatrix bitMatrix = multiFormatWriter.encode(SerialNumber, BarcodeFormat.QR_CODE, 200, 200);
-                        Log.d("QRCODE 생성", SerialNumber);
-                        BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
-                        Bitmap bitmap = barcodeEncoder.createBitmap(bitMatrix);
-                        qrCode.setImageBitmap(bitmap);
-                        if(qrCode == null) {
-                            Log.d("ERROR", "NUllPointerException");
-                        } else {
-                            Log.d("부착성공", "Success");
-
-                        }
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-
-                }
             }
         };
 
         ScanBtn.setOnClickListener(BtnEvent);
         ManageBtn.setOnClickListener(BtnEvent);
-        QrLayoutBtn.setOnClickListener(BtnEvent);
 
 
     }

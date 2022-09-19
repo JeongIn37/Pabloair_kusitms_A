@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Window window = getWindow();
+        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
         Button OrderBtn = findViewById(R.id.home_btn_order);
         Button OrderListBtn = findViewById(R.id.home_btn_orderList);
         Button SearchBtn = findViewById(R.id.home_btn_search);
