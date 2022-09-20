@@ -3,6 +3,8 @@ package com.example.pabloair_kusitms_a;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,8 +19,6 @@ import org.json.JSONObject;
 public class Home_Scan_Activity extends AppCompatActivity {
 
     private Button buttonScan;
-    private TextView SerializeNumber;
-
     //qr Code Scanner Object
     private IntentIntegrator qrScan;
 
@@ -28,7 +28,7 @@ public class Home_Scan_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_scan_home);
 
         buttonScan = (Button) findViewById(R.id.buttonScan);
-        SerializeNumber = (TextView) findViewById(R.id.SerializeNumber);
+
 
         qrScan = new IntentIntegrator(this);
 
@@ -57,7 +57,6 @@ public class Home_Scan_Activity extends AppCompatActivity {
                     JSONObject object = new JSONObject(result.getContents());
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    SerializeNumber.setText(result.getContents());
                 }
             }
         } else {

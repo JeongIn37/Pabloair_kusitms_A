@@ -11,12 +11,18 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.content.Intent;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.util.SparseArray;
+import android.view.Gravity;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,13 +50,17 @@ public class Manager_Scan_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manager_scan);
 
+        //카메라 풀 스크린
         Window window = getWindow();
-        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        //화면이 켜진 상태로 유지
+        window.setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 
         //카메라 권한 확인
-        if (ContextCompat.checkSelfPermission(this,Manifest.permission.CAMERA)
-        != PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED) {
             //권한 요청 코드
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, SINGLE_PERMISSION);
         } else {
@@ -58,18 +68,22 @@ public class Manager_Scan_Activity extends AppCompatActivity {
             barcodeDetector = new BarcodeDetector.Builder(getApplicationContext())
                     .setBarcodeFormats(Barcode.QR_CODE).build();
 
-            textView = (TextView)findViewById(R.id.qrCode_text);
+//            textView = (TextView) findViewById(R.id.qrCode_text);
             surfaceView = findViewById(R.id.surfaceView);
 
             //카메라 - 바코드리더 연결
             cameraSource = new CameraSource.Builder(getApplicationContext(), barcodeDetector)
-                    .setRequestedPreviewSize(640,400).build();
+                    .setRequestedPreviewSize(640, 800)
+                    .setFacing(CameraSource.CAMERA_FACING_BACK) //전면 카메라 사용
+//                    .setRequestedFps(29.8f) //프레임
+                    .setAutoFocusEnabled(true) //포커싱 허용
+                    .build();
 
             surfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {
                 @Override
                 public void surfaceCreated(@NonNull SurfaceHolder surfaceholder) {
-                    if(ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA)
-                            !=PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA)
+                            != PackageManager.PERMISSION_GRANTED) {
                         Log.d("surfaceCreated", "SUCCESS");
                         return;
                     }
@@ -100,35 +114,46 @@ public class Manager_Scan_Activity extends AppCompatActivity {
                 @Override
                 public void receiveDetections(@NonNull Detector.Detections<Barcode> detections) {
                     final SparseArray<Barcode> qrcode = detections.getDetectedItems();
-                    if(qrcode.size() != 0) {
-                        textView.post(new Runnable() {
-                            @Override
-                            //QR 코드 값을 TextView에 띄움
-                            public void run() {
-                                textView.setText(qrcode.valueAt(0).displayValue);
+                    Handler handler = new Handler(Looper.getMainLooper());
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (qrcode.size() != 0) {
+                                String qrCodeContents = qrcode.valueAt(0).displayValue;
+                                Log.d("Detection", qrCodeContents);
+                                Toast toast = Toast.makeText(getApplicationContext(), "주문번호: " + qrcode.valueAt(0).displayValue +"\n 스캔 완료 되었습니다", Toast.LENGTH_SHORT);
+                                toast.setGravity(Gravity.CENTER, Gravity.CENTER_HORIZONTAL, Gravity.CENTER_VERTICAL);
+                                toast.show();
                             }
-                        });
-                    }
+                        }
+                    }, 0);
+
                 }
             });
-
         }
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-        if(result != null) {
-            if(result.getContents() == null) {
-                Toast.makeText(this, "QR인식이 잘못되었습니다", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(this, "주문번호: " + result.getContents() + "잠금 해제 완료", Toast.LENGTH_LONG).show();
-            }
-        } else {
-            super.onActivityResult(requestCode, resultCode, data);
-        }
+    //레이어
+    private void setAnimation() {
+        final View line = (View) findViewById(R.id.line);
+        final Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.move);
+        animation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
 
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                line.startAnimation(animation);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        line.startAnimation(animation);
     }
 
 }

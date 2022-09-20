@@ -17,6 +17,7 @@
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A/app/src/main/res/layout/activity_user_login.xml" value="0.1" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A/app/src/main/res/layout/fragment_user_check_a.xml" value="0.23645833333333333" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/drawable/arrow_ongoing_blue.xml" value="0.1" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/drawable/camera_border.xml" value="0.1" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/drawable/elipse_blue.xml" value="0.1" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/drawable/elipse_blue_fill.xml" value="0.1" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/drawable/elipse_blue_nonfill.xml" value="0.2" />
@@ -46,7 +47,7 @@
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_manager_home.xml" value="0.4" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_manager_login.xml" value="0.2608915906788247" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_manager_open.xml" value="0.215625" />
-        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_manager_scan.xml" value="0.3015625" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_manager_scan.xml" value="0.1753846153846154" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_order_list_click.xml" value="0.215625" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_scan_home.xml" value="0.215625" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_splash.xml" value="0.3015625" />
