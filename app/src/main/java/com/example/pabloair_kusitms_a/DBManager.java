@@ -109,6 +109,31 @@ public class DBManager extends SQLiteOpenHelper {
         }
     }
 
+    //QR스캔 확인(주문번호 - QR)
+    public Boolean checkQR(String serializedNumber) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select * from OrderDetail where serializedNumber=?", new String[] {serializedNumber});
+
+        if(cursor.getCount() >0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    //QRExpire 확인(주문번호 - Ongoing)
+    public Boolean checkExpire(String serializedNumber) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select onGoing from OrderDetail where serializedNumber=? ", new String[] {serializedNumber});
+        if(cursor.getInt(0) == 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     //리사이클러뷰 커서 전달
     public Cursor rawQuery(String SQL) {
         SQLiteDatabase db = this.getWritableDatabase();

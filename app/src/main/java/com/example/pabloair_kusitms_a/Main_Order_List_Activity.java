@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.LinearGradient;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -15,14 +16,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main_Order_List_Activity extends AppCompatActivity {
+public class Main_Order_List_Activity extends AppCompatActivity implements Serializable {
 
     private RecyclerView mRecyclerView;
     private Main_OrderListAdapter mRecyclerAdapter;
-    private ArrayList<ListOrderItem> mOrderList = new ArrayList<>();
+    public ArrayList<ListOrderItem> mOrderList;
     DBManager dbManager;
     String Listlength;
 
@@ -76,10 +78,11 @@ public class Main_Order_List_Activity extends AppCompatActivity {
         mRecyclerAdapter.setOnItemClickListener(new Main_OrderListAdapter.onItemClickListener() {
             @Override
             public void onItemClick(View v, int pos) {
-                    String posString = String.valueOf(pos);
                     Intent intent = new Intent(getApplication(), OrderList_clickActivity.class);
-                    intent.putExtra("pos", posString);
+                    intent.putParcelableArrayListExtra("OrderList", mOrderList); //리스트 전달
+                    intent.putExtra("post", pos); //누른 아이템의 포지션 전달
                     startActivity(intent);
+                    Log.d("post", String.valueOf(pos));
                     Log.d("Activity", "OrderList_clickActivity");
 
             }

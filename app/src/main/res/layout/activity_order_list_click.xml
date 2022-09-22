@@ -69,12 +69,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="주문 상세 조회"
-            android:layout_marginBottom="15dp"
+            android:gravity="center"
             android:textSize="25sp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/nanumsquareb"
-            android:textColor="@color/font_cyan"/>
+            android:fontFamily="@font/nanumsquareeb"
+            android:textColor="@color/font_cyan"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:text="주문 상세 조회"/>
 
 
             <LinearLayout
@@ -83,60 +84,59 @@
                 android:orientation="vertical" >
 
                 <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_marginStart="30dp"
+                    android:layout_height="wrap_content">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:paddingStart="30dp"
-                        android:gravity="center"
-                        android:text="주문번호 "
-                        android:textColor="@color/font_dark_gray"
-                        android:fontFamily="@font/nanumsquareb"
-                        android:textSize="16sp" />
+                        android:layout_height="wrap_content">
 
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/click_list_orderNumber"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="A20220907AXC03"
-                        android:textColor="@color/font_dark_gray"
-                        android:fontFamily="@font/nanumsquareb"
-                        android:textSize="16sp" />
+                            <TextView
+                                android:id="@+id/click_list_orderNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/nanumsquare_acb"
+                                android:textSize="15sp"
+                                android:textColor="@color/font_dark_gray"
+                                android:text="주문번호 A20220907AXC03" />
 
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="1" />
+                            <TextView
+                                android:id="@+id/click_list_station"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:fontFamily="@font/nanumsquare_acb"
+                                android:textColor="@color/font_black"
+                                android:textSize="18sp"
+                                android:text="가평군 농협 하나로마트 자라점" />
 
-                    <ImageView
-                        android:id="@+id/click_list_qrcode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/listview_qrcode"
-                        android:layout_marginEnd="30dp"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/click_list_qrcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="54dp"
+                            android:layout_marginEnd="30dp"
+                            android:background="@color/zxing_transparent"
+                            android:scaleType="fitEnd"
+                            android:src="@drawable/qr_sample" />
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
 
 
                 <TextView
-                    android:id="@+id/click_list_station"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="가평군 농협 하나로마트 자라점"
-                    android:paddingBottom="14dp"
-                    android:paddingStart="30dp"
-                    android:paddingEnd="30dp"
-                    android:textColor="@color/font_black"
-                    android:fontFamily="@font/nanumsquareeb"
-                    android:textSize="20sp"/>
-
-
-                <TextView
+                    android:id="@+id/click_list_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="30dp"
@@ -144,18 +144,19 @@
                     android:text="경기도 가평군 가평읍 호반로 2562(우) 12427"
                     android:textColor="@color/font_dark_gray"
                     android:fontFamily="@font/nanumsquarer"
-                    android:textSize="16sp"/>
+                    android:textSize="15sp"/>
 
                 <TextView
+                    android:id="@+id/click_list_address1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="30dp"
                     android:paddingEnd="30dp"
                     android:layout_marginTop="2dp"
                     android:text="지번 | 가평읍 달천리 452-1"
-                    android:paddingBottom="14dp"
+                    android:paddingBottom="13dp"
                     android:fontFamily="@font/nanumsquarer"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
                     android:textColor="@color/font_dark_gray"/>
 
                 <TextView
@@ -174,7 +175,7 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"
+                    android:layout_height="1dp"
                     android:background="#ebebeb"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp" />
@@ -197,32 +198,60 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="청보 깐마늘 100g 외 6개"
-                    android:fontFamily="@font/nanumsquarer"
+                    android:fontFamily="@font/nanumsquareb"
                     android:textColor="@color/font_black"
-                    android:paddingStart="30dp"
+                    android:paddingStart="29dp"
                     android:paddingEnd="30dp"
                     android:paddingTop="15dp"
                     android:paddingBottom="15dp"
-                    android:textSize="14sp" />
+                    android:textSize="15sp" />
 
-                <TextView
-                    android:id="@+id/click_list_orderPrice"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="주문금액 : 87050원"
-                    android:textSize="15dp"
                     android:paddingStart="30dp"
                     android:paddingEnd="30dp"
-                    android:fontFamily="@font/nanumsquareb"
-                    android:textColor="@color/font_cyan"/>
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanumsquare_acb"
+                        android:textColor="@color/font_black"
+                        android:textSize="15sp"
+                        android:text="주문 금액: " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanumsquare_acb"
+                        android:textColor="@color/font_blue"
+                        android:textSize="15sp"
+                        android:text="87,050원" />
+
+                </LinearLayout>
+
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"
+                    android:layout_height="1dp"
                     android:background="#ebebeb"
                     android:layout_marginTop="14dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquare_aceb"
+                    android:textColor="@color/font_black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:textSize="19sp"
+                    android:layout_gravity="center"
+                    android:text="주문 물품 목록" />
+
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/clickList_rv"
@@ -236,7 +265,6 @@
             </LinearLayout>
 
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

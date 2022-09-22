@@ -132,6 +132,7 @@ public class Manager_Scan_Activity extends AppCompatActivity {
                 }
             });
         }
+        setAnimation();
     }
 
     //레이어

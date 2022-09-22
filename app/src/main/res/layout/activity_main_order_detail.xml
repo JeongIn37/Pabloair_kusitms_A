@@ -127,7 +127,7 @@
                             android:text="가평군 농협 하나로마트 자라점" />
                     </LinearLayout>
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/qrCode_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="64dp"
@@ -415,12 +415,9 @@
             </LinearLayout>
 
 
-
             <View
                 android:layout_width="match_parent"
                 android:layout_height="110dp"/>
-
-
 
         </LinearLayout>
 

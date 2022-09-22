@@ -42,8 +42,8 @@
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_main.xml" value="0.3015625" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_main_mypage.xml" value="0.23697916666666666" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_main_order.xml" value="0.23697916666666666" />
-        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_main_order_detail.xml" value="0.1" />
-        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_main_orderlist.xml" value="0.264" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_main_order_detail.xml" value="0.264" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_main_orderlist.xml" value="0.176" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_main_search.xml" value="0.215625" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_manager_home.xml" value="0.4" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_manager_login.xml" value="0.2608915906788247" />
@@ -55,9 +55,10 @@
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_user_check.xml" value="0.3015625" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_user_login.xml" value="0.1" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/activity_user_signup.xml" value="0.4664179104477612" />
-        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/click_list_item.xml" value="0.2427536231884058" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/click_list_item.xml" value="0.264" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/item_order.xml" value="0.264" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/list_order_item.xml" value="0.4" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/layout/search_item.xml" value="0.264" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1425" />
         <entry key="app/src/main/res/drawable/form_box.xml" value="0.133" />
         <entry key="app/src/main/res/drawable/ic_administrator_solid.xml" value="0.1" />
