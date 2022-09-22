@@ -121,6 +121,7 @@ public class Manager_Scan_Activity extends AppCompatActivity {
                             if (qrcode.size() != 0) {
                                 String qrCodeContents = qrcode.valueAt(0).displayValue;
                                 Log.d("Detection", qrCodeContents);
+
                                 Toast toast = Toast.makeText(getApplicationContext(), "주문번호: " + qrcode.valueAt(0).displayValue +"\n 스캔 완료 되었습니다", Toast.LENGTH_SHORT);
                                 toast.setGravity(Gravity.CENTER, Gravity.CENTER_HORIZONTAL, Gravity.CENTER_VERTICAL);
                                 toast.show();

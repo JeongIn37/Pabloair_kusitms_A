@@ -4,6 +4,10 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.provider.ContactsContract;
+import android.util.Log;
+
+import com.google.android.material.tabs.TabLayout;
 
 public class DBManager extends SQLiteOpenHelper {
 
@@ -32,12 +36,21 @@ public class DBManager extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO Admin VALUES ('yujeong00');");
         db.execSQL("INSERT INTO Admin VALUES ('jeongin99');");
         db.execSQL("INSERT INTO Admin VALUES ('minseo00');");
+
+        /*OrderDetail Table*/
+        db.execSQL("CREATE TABLE IF NOT EXISTS OrderDetail(id TEXT PRIMARY KEY, name TEXT , serializedNumber TEXT, station TEXT, weight INTEGER, takeTime INTEGER, onGoing INTEGER);");
+        db.execSQL("INSERT INTO OrderDetail (id, name, serializedNumber, station, weight, takeTime, onGoing) VALUES ('yujeong00', '김유정', 'A20220907AXC03', '가평 남이섬 A1 스테이션', 8, 40, 1)");
+        db.execSQL("INSERT INTO OrderDetail (id, name, serializedNumber, station, weight, takeTime, onGoing) VALUES ('jeongin99', '윤정인', 'A20220911B12DX', '가평 파인 포레스트', 3, 20, 0)");
+        db.execSQL("INSERT INTO OrderDetail (id, name, serializedNumber, station, weight, takeTime, onGoing) VALUES ('minseo00', '신민서', 'A20220912CK782', '가평군 농협 하나로마트 자라점', 5, 40, 0)");
+
+        /*ClickItem Table*/
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS User");
         db.execSQL("DROP TABLE IF EXISTS OrderList");
+        db.execSQL("DROP TABLE IF EXISTS OrderDetail");
 
     }
 
@@ -94,6 +107,24 @@ public class DBManager extends SQLiteOpenHelper {
         } else {
             return false;
         }
+    }
+
+    //리사이클러뷰 커서 전달
+    public Cursor rawQuery(String SQL) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Log.d("executeQuery", "called");
+        Cursor c1 = null;
+
+        try {
+            c1 = db.rawQuery(SQL,null);
+            String cursorPos = String.valueOf(c1.getCount());
+            Log.d("cursor count", cursorPos);
+        } catch(Exception e) {
+            Log.d("ERROR", "Exception in executeQuery");
+
+
+        }
+        return c1;
     }
 
 }

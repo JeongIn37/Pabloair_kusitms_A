@@ -1,5 +1,6 @@
 package com.example.pabloair_kusitms_a;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,10 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main_OrderListAdapter extends RecyclerView.Adapter<Main_OrderListAdapter.ViewHolder> {
 
-    private ArrayList<ListOrderItem> mOrderList;
+    private ArrayList<ListOrderItem> mOrderList=new ArrayList<ListOrderItem>();
     private onItemClickListener itemClickListener;
 
     @NonNull
@@ -27,13 +29,11 @@ public class Main_OrderListAdapter extends RecyclerView.Adapter<Main_OrderListAd
     @Override
     public void onBindViewHolder(@NonNull Main_OrderListAdapter.ViewHolder holder, int position) {
         holder.onBind(mOrderList.get(position));
-
     }
 
     //리스트 생성
     public void setOrderList(ArrayList<ListOrderItem> list) {
         this.mOrderList = list;
-        notifyDataSetChanged();
     }
 
     @Override
@@ -57,8 +57,7 @@ public class Main_OrderListAdapter extends RecyclerView.Adapter<Main_OrderListAd
         TextView station;
         TextView takeTime;
         TextView weight;
-        ImageView QrCode;
-
+//        ImageView QrCode;
 
         //ViewHolder 생성자
         public ViewHolder(@NonNull View itemView) {
@@ -76,9 +75,11 @@ public class Main_OrderListAdapter extends RecyclerView.Adapter<Main_OrderListAd
                 public void onClick(View v) {
                     //아이템 존재 포지션 확인
                     int pos = getAdapterPosition();
+                    String posString = String.valueOf(pos);
                     if(pos != RecyclerView.NO_POSITION) {
                         if(itemClickListener != null) {
                             itemClickListener.onItemClick(v,pos);
+                            Log.d("position ",posString); //상세 페이지로 넘어가기
                         }
                     }
                 }
@@ -92,7 +93,29 @@ public class Main_OrderListAdapter extends RecyclerView.Adapter<Main_OrderListAd
             station.setText(item.getStation());
             weight.setText("상품이동중 (중량 " + item.getWeight() + "kg)");
             takeTime.setText("예상시간 ("+ item.getTakeTime() + "분)");
+
+
+
         }
 
+
+
     }
+
+    public void addItemToList(String name, String serializedNumber, String station, int weight, int takeTime, int onGoing) {
+        mOrderList = new ArrayList<ListOrderItem>();
+        ListOrderItem listdata= new ListOrderItem();
+
+        //가져온 데이터로 설정
+        listdata.setName(name);
+        listdata.setSerializedNumber(serializedNumber);
+        listdata.setStation(station);
+        listdata.setWeight(weight);
+        listdata.setTakeTime(takeTime);
+        listdata.setOnGoing(onGoing);
+
+        mOrderList.add(listdata);
+        this.notifyDataSetChanged();
+    }
+
 }

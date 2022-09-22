@@ -12,6 +12,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
@@ -35,6 +36,8 @@ public class Create_QRcodeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_qrcode);
 
+
+        //넘겨 받아야할 값: DB에서의 주문번호 값
         Intent intent = getIntent(); //Serialized Num 받기
         SerializedNumber = intent.getStringExtra("SerializedNumber");
         qrCode = (ImageView) findViewById(R.id.user_qrCode_background);

@@ -196,7 +196,7 @@
                     android:id="@+id/click_list_orderInfo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="청보 깐마늘 100g 외 12개"
+                    android:text="청보 깐마늘 100g 외 6개"
                     android:fontFamily="@font/nanumsquarer"
                     android:textColor="@color/font_black"
                     android:paddingStart="30dp"
