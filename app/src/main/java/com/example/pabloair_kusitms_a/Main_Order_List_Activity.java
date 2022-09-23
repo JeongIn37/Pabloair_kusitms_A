@@ -28,7 +28,6 @@ public class Main_Order_List_Activity extends AppCompatActivity implements Seria
     private RecyclerView mRecyclerView;
     private Main_OrderListAdapter mRecyclerAdapter;
     public ArrayList<ListOrderItem> mOrderList;
-    public ListOrderItem item;
     DBManager dbManager;
 
 
@@ -105,7 +104,7 @@ public class Main_Order_List_Activity extends AppCompatActivity implements Seria
 
     void setExpireState() {
         for(int i = 0; i < mOrderList.size(); i++) {
-            if(item.getOnGoing() == 0) {
+            if(mOrderList.get(i).getOnGoing() == 0) {
 
             }
 

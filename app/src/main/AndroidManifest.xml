@@ -5,6 +5,16 @@
     <!-- QR코드 스캔 권한 등록 1 : 카메라 허용 -->
     <uses-permission android:name="android.permission.CAMERA" />
 
+    <!-- blutebooth 허용 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true"/>
+
 
     <application
         android:allowBackup="true"

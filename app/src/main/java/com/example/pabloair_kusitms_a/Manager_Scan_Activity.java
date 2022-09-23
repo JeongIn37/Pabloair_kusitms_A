@@ -43,7 +43,6 @@ public class Manager_Scan_Activity extends AppCompatActivity {
     private SurfaceView surfaceView;
     private CameraSource cameraSource;
     private BarcodeDetector barcodeDetector;
-    TextView textView;
 
     DBManager dbManager;
 
@@ -73,7 +72,6 @@ public class Manager_Scan_Activity extends AppCompatActivity {
             barcodeDetector = new BarcodeDetector.Builder(getApplicationContext())
                     .setBarcodeFormats(Barcode.QR_CODE).build();
 
-            surfaceView = findViewById(R.id.surfaceView);
 
             //카메라 - 바코드리더 연결
             cameraSource = new CameraSource.Builder(getApplicationContext(), barcodeDetector)
@@ -82,6 +80,7 @@ public class Manager_Scan_Activity extends AppCompatActivity {
                     .setAutoFocusEnabled(true) //포커싱 허용
                     .build();
 
+            surfaceView = findViewById(R.id.surfaceView);
             surfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {
                 @Override
                 public void surfaceCreated(@NonNull SurfaceHolder surfaceholder) {
@@ -111,8 +110,7 @@ public class Manager_Scan_Activity extends AppCompatActivity {
 
             barcodeDetector.setProcessor(new Detector.Processor<Barcode>() {
                 @Override
-                public void release() {
-                }
+                public void release() { }
 
                 @Override
                 public void receiveDetections(@NonNull Detector.Detections<Barcode> detections) {
@@ -131,10 +129,12 @@ public class Manager_Scan_Activity extends AppCompatActivity {
                                     Toast toast = Toast.makeText(getApplicationContext(), "주문번호: " + qrcode.valueAt(0).displayValue +"\n 스캔 완료 되었습니다", Toast.LENGTH_SHORT);
                                     toast.setGravity(Gravity.CENTER, Gravity.CENTER_HORIZONTAL, Gravity.CENTER_VERTICAL);
                                     toast.show();
+                                    Log.d("Order process finished", qrCodeContents);
                                 } else {
-                                    Toast toast = Toast.makeText(getApplicationContext(), "이미 처리 완료된 주문입니다. ", Toast.LENGTH_SHORT);
+                                    Toast toast = Toast.makeText(getApplicationContext(), "유효하지 않은 QR코드입니다", Toast.LENGTH_SHORT);
                                     toast.setGravity(Gravity.CENTER, Gravity.CENTER_HORIZONTAL, Gravity.CENTER_VERTICAL);
                                     toast.show();
+                                    Log.d("Expired Order", qrCodeContents);
                                 }
 
                             }
@@ -154,9 +154,7 @@ public class Manager_Scan_Activity extends AppCompatActivity {
         final Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.move);
         animation.setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
+            public void onAnimationStart(Animation animation) { }
 
             @Override
             public void onAnimationEnd(Animation animation) {
@@ -164,13 +162,17 @@ public class Manager_Scan_Activity extends AppCompatActivity {
             }
 
             @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
+            public void onAnimationRepeat(Animation animation) { }
         });
         line.startAnimation(animation);
     }
 
+    //문 여는 코드
+    private Boolean permissionDoor(String serial) {
+        Boolean checkExpire = dbManager.checkExpire(serial);
+        if(checkExpire == true) { return true; }
+        else { return false; }
+    }
 
 
 }
