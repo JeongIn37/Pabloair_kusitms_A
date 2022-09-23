@@ -125,8 +125,8 @@ public class DBManager extends SQLiteOpenHelper {
     //QRExpire 확인(주문번호 - Ongoing)
     public Boolean checkExpire(String serializedNumber) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("select onGoing from OrderDetail where serializedNumber=? ", new String[] {serializedNumber});
-        if(cursor.getInt(0) == 0) {
+        Cursor cursor = db.rawQuery("select onGoing from OrderDetail where serializedNumber=? and onGoing=0", new String[] {serializedNumber});
+        if(cursor.getCount() > 0) {
             return true;
         }
         else {

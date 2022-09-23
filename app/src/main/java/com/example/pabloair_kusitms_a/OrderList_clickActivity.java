@@ -34,6 +34,7 @@ public class OrderList_clickActivity extends AppCompatActivity {
     TextView ClickListAddress1;
 
     String SerializedNum;
+    int expire;
     private int position;
 
 
@@ -107,7 +108,8 @@ public class OrderList_clickActivity extends AppCompatActivity {
                     intent.putExtra("SerializedNumber", SerializedNum);
 
                     //QR expire - Ongoing(0/1) 값으로 QR 토스트 전달
-
+                    expire = mOrderList.get(position).onGoing;
+                    intent.putExtra("expire", expire);
 
                     startActivity(intent);
                 }

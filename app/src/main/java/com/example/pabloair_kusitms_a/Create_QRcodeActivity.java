@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.graphics.Bitmap;
 import android.provider.ContactsContract;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
@@ -29,7 +30,11 @@ import org.json.JSONObject;
 public class Create_QRcodeActivity extends AppCompatActivity {
 
     ImageView qrCode;
+    TextView qrTv1,qrTv2;
+
     String SerializedNumber;
+    int expire;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +46,16 @@ public class Create_QRcodeActivity extends AppCompatActivity {
         Intent intent = getIntent(); //Serialized Num 받기
         SerializedNumber = intent.getStringExtra("SerializedNumber");
         qrCode = (ImageView) findViewById(R.id.user_qrCode_background);
+
+        //넘겨 받아야할 값
+        expire = intent.getIntExtra("expire", 0);
+        Log.d("expire", String.valueOf(expire));
+
+        qrTv1 = (TextView) findViewById(R.id.create_qrCode_tv1);
+        qrTv2 = (TextView) findViewById(R.id.create_qrCode_tv2);
+
+        alarmExpire();
+        tvVisibile();
 
         //하단바 적용
         Window window = getWindow();
@@ -65,6 +80,28 @@ public class Create_QRcodeActivity extends AppCompatActivity {
 
         } catch (WriterException e) {
             e.printStackTrace();
+        }
+
+    }
+
+    void alarmExpire() {
+        if(expire == 0) { //주문이 완료 되지 않았을경우(주문 진행중 or 수거 완료)
+        }
+        else { //그 밖의 경우
+            Toast.makeText(getApplicationContext(), "완료된 주문의 QR코드입니다", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    void tvVisibile() {
+        if(expire == 0) { //주문이 완료 되지 않았을경우(주문 진행중 or 수거 완료)
+            qrTv1.setVisibility(View.VISIBLE);
+            qrTv2.setVisibility(View.VISIBLE);
+
+        }
+        else { //그 밖의 경우
+            Toast.makeText(getApplicationContext(), "완료된 주문의 QR코드입니다", Toast.LENGTH_SHORT).show();
+            qrTv1.setVisibility(View.GONE);
+            qrTv2.setVisibility(View.GONE);
         }
 
     }

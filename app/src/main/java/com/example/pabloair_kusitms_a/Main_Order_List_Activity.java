@@ -22,11 +22,15 @@ import java.util.List;
 
 public class Main_Order_List_Activity extends AppCompatActivity implements Serializable {
 
+    private ImageView c1, c2, c3;
+    private View arrow1, arrow2;
+
     private RecyclerView mRecyclerView;
     private Main_OrderListAdapter mRecyclerAdapter;
     public ArrayList<ListOrderItem> mOrderList;
+    public ListOrderItem item;
     DBManager dbManager;
-    String Listlength;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,7 +92,29 @@ public class Main_Order_List_Activity extends AppCompatActivity implements Seria
             }
         });
 
+        // expire에 대한 이벤트 설정
+        c1 = (ImageView) findViewById(R.id.list_ongoing_iv1);
+        c2 = (ImageView) findViewById(R.id.list_ongoing_iv2);
+        c3 = (ImageView) findViewById(R.id.list_ongoing_iv3);
 
+        arrow1 = (View) findViewById(R.id.list_ongoing_arrow1);
+        arrow2 = (View) findViewById(R.id.list_ongoing_arrow2);
+
+
+    }
+
+    void setExpireState() {
+        for(int i = 0; i < mOrderList.size(); i++) {
+            if(item.getOnGoing() == 0) {
+
+            }
+
+            else {
+
+            }
+
+
+        }
     }
 
 }

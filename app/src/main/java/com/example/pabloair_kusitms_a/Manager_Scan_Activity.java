@@ -45,6 +45,8 @@ public class Manager_Scan_Activity extends AppCompatActivity {
     private BarcodeDetector barcodeDetector;
     TextView textView;
 
+    DBManager dbManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +59,9 @@ public class Manager_Scan_Activity extends AppCompatActivity {
         //화면이 켜진 상태로 유지
         window.setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
+        //db매니저 생성
+        dbManager = new DBManager(this);
+
 
         //카메라 권한 확인
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
@@ -68,14 +73,12 @@ public class Manager_Scan_Activity extends AppCompatActivity {
             barcodeDetector = new BarcodeDetector.Builder(getApplicationContext())
                     .setBarcodeFormats(Barcode.QR_CODE).build();
 
-//            textView = (TextView) findViewById(R.id.qrCode_text);
             surfaceView = findViewById(R.id.surfaceView);
 
             //카메라 - 바코드리더 연결
             cameraSource = new CameraSource.Builder(getApplicationContext(), barcodeDetector)
                     .setRequestedPreviewSize(640, 800)
                     .setFacing(CameraSource.CAMERA_FACING_BACK) //전면 카메라 사용
-//                    .setRequestedFps(29.8f) //프레임
                     .setAutoFocusEnabled(true) //포커싱 허용
                     .build();
 
@@ -122,9 +125,18 @@ public class Manager_Scan_Activity extends AppCompatActivity {
                                 String qrCodeContents = qrcode.valueAt(0).displayValue;
                                 Log.d("Detection", qrCodeContents);
 
-                                Toast toast = Toast.makeText(getApplicationContext(), "주문번호: " + qrcode.valueAt(0).displayValue +"\n 스캔 완료 되었습니다", Toast.LENGTH_SHORT);
-                                toast.setGravity(Gravity.CENTER, Gravity.CENTER_HORIZONTAL, Gravity.CENTER_VERTICAL);
-                                toast.show();
+                                //서버 연동 확인
+                                Boolean checkExpire = dbManager.checkExpire(qrCodeContents);
+                                if(checkExpire == true) { //onGoing == 0
+                                    Toast toast = Toast.makeText(getApplicationContext(), "주문번호: " + qrcode.valueAt(0).displayValue +"\n 스캔 완료 되었습니다", Toast.LENGTH_SHORT);
+                                    toast.setGravity(Gravity.CENTER, Gravity.CENTER_HORIZONTAL, Gravity.CENTER_VERTICAL);
+                                    toast.show();
+                                } else {
+                                    Toast toast = Toast.makeText(getApplicationContext(), "이미 처리 완료된 주문입니다. ", Toast.LENGTH_SHORT);
+                                    toast.setGravity(Gravity.CENTER, Gravity.CENTER_HORIZONTAL, Gravity.CENTER_VERTICAL);
+                                    toast.show();
+                                }
+
                             }
                         }
                     }, 0);
@@ -134,6 +146,7 @@ public class Manager_Scan_Activity extends AppCompatActivity {
         }
         setAnimation();
     }
+
 
     //레이어
     private void setAnimation() {
@@ -157,5 +170,7 @@ public class Manager_Scan_Activity extends AppCompatActivity {
         });
         line.startAnimation(animation);
     }
+
+
 
 }

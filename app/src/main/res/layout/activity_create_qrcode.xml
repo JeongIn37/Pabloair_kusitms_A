@@ -91,15 +91,17 @@
             android:layout_marginTop="50dp"/>
 
         <TextView
+            android:id="@+id/create_qrCode_tv1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:text="QR코드가 작동하지 않을시"
             android:fontFamily="@font/nanumsquare_acb"
             android:textSize="19sp"
             android:textColor="#939393"/>
 
         <TextView
+            android:id="@+id/create_qrCode_tv2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="관리자에게 문의하세요"
@@ -109,15 +111,17 @@
             android:textColor="#939393"/>
 
         <TextView
+            android:id="@+id/create_qrCode_tv3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="문의하기"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/nanumsquare_acb"
             android:textSize="16sp"
             android:textColor="@color/font_cyan"/>
 
         <View
+            android:id="@+id/create_qrCode_v1"
             android:layout_width="80dp"
             android:layout_height="1dp"
             android:layout_marginTop="5dp"
