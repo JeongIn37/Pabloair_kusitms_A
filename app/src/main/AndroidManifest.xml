@@ -11,6 +11,9 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
+    <!-- firebase 연결을 위한 인터넷 권한 등록 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-feature
         android:name="android.hardware.bluetooth_le"
         android:required="true"/>
@@ -37,9 +40,6 @@
             android:name=".Main_Search_Activity"
             android:exported="false" />
         <activity
-            android:name=".Main_Order_Detail_Activity"
-            android:exported="false" />
-        <activity
             android:name=".Main_Order_List_Activity"
             android:exported="false" />
         <activity
@@ -60,9 +60,6 @@
         <activity
             android:name=".Manager_home_Activity"
             android:exported="false" />
-        <activity
-            android:name=".Home_Scan_Activity"
-            android:exported="true" />
         <activity
             android:name=".User_Signup_Activity"
             android:exported="true" />

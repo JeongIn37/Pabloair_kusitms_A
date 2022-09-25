@@ -13,10 +13,16 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class UserCheckActivity extends AppCompatActivity {
 
     String UserType = "";
     DBManager DB;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +31,16 @@ public class UserCheckActivity extends AppCompatActivity {
 
         // 더미데이터 생성을 위한 DB 호출용
         DB = new DBManager(this);
+
+        // DB 테스트
+        // add할 때 key-value 형태로 넘겨주어야 함!
+        Map<String, Object> user = new HashMap<>();
+        user.put("id", "test");
+        user.put("phone", "01012345678");
+        user.put("pwd", "1234567");
+
+        db.collection("User").add(user);
+
 
 
         Window window = getWindow();

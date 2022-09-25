@@ -67,12 +67,14 @@
         <entry key="app/src/main/res/drawable/user_check_btn.xml" value="0.1425" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.15552178318135765" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main_search.xml" value="0.1431159420289855" />
         <entry key="app/src/main/res/layout/activity_manager_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.32083333333333336" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_user_check.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_user_login.xml" value="0.33699493408203124" />
         <entry key="app/src/main/res/layout/activity_user_signup.xml" value="0.42251223491027734" />
+        <entry key="app/src/main/res/layout/item_order.xml" value="0.1" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.4" />
       </map>
     </option>
