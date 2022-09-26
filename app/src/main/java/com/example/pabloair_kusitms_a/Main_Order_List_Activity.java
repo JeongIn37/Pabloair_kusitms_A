@@ -3,6 +3,7 @@ package com.example.pabloair_kusitms_a;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -12,23 +13,35 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Main_Order_List_Activity extends AppCompatActivity implements Serializable {
 
-    private ImageView c1, c2, c3;
-    private View arrow1, arrow2;
+    ImageView c2, c3;
+    View arrow2;
 
     private RecyclerView mRecyclerView;
     private Main_OrderListAdapter mRecyclerAdapter;
     public ArrayList<ListOrderItem> mOrderList;
     DBManager dbManager;
+
+    //firestore 접근을 위한 객체
+    private static FirebaseFirestore db;
 
 
     @Override
@@ -49,9 +62,9 @@ public class Main_Order_List_Activity extends AppCompatActivity implements Seria
         mOrderList = new ArrayList<>();
 
 
+        //커서를 이용하여 DB에 있는 정보 가져오기
         dbManager = new DBManager(this);
         SQLiteDatabase database = dbManager.getReadableDatabase();
-
         Cursor cursor = database.rawQuery("SELECT * FROM OrderDetail", null);
         int recordCount = cursor.getCount();
         Log.d("recordCount", String.valueOf(recordCount));
@@ -73,7 +86,6 @@ public class Main_Order_List_Activity extends AppCompatActivity implements Seria
         mRecyclerAdapter.notifyDataSetChanged();
 
 
-
         //리사이클러뷰 배치
         mRecyclerAdapter.setOrderList(mOrderList);
 
@@ -91,29 +103,25 @@ public class Main_Order_List_Activity extends AppCompatActivity implements Seria
             }
         });
 
-        // expire에 대한 이벤트 설정
-        c1 = (ImageView) findViewById(R.id.list_ongoing_iv1);
-        c2 = (ImageView) findViewById(R.id.list_ongoing_iv2);
-        c3 = (ImageView) findViewById(R.id.list_ongoing_iv3);
-
-        arrow1 = (View) findViewById(R.id.list_ongoing_arrow1);
-        arrow2 = (View) findViewById(R.id.list_ongoing_arrow2);
-
-
     }
 
-    void setExpireState() {
-        for(int i = 0; i < mOrderList.size(); i++) {
-            if(mOrderList.get(i).getOnGoing() == 0) {
-
+    private void GetListData() {
+        mOrderList.clear();
+        db.collection("OrderDetail").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if(task.isSuccessful()) { //연결이 성공적일시
+                    for(QueryDocumentSnapshot documentSnapshot : task.getResult()) {
+                        ListOrderItem item = documentSnapshot.toObject(ListOrderItem.class);
+                        mOrderList.add(item);
+                        Log.d("firestore connect is", "success");
+                    }
+                    } else {
+                    Log.d("firestore connect is failed", String.valueOf(task.getException()));
+                }
             }
-
-            else {
-
-            }
-
-
-        }
+        });
     }
+
 
 }

@@ -18,6 +18,7 @@ public class ListOrderItem implements Parcelable { //객체 intent용 직렬화
 
     //생성자
     public ListOrderItem(String name, String serializedNumber, String station, int weight, int takeTime, int onGoing) {
+//        this.id=id;
         this.name = name;
         this.serializedNumber = serializedNumber;
         this.station = station;
@@ -42,6 +43,9 @@ public class ListOrderItem implements Parcelable { //객체 intent용 직렬화
     }
 
     //setter
+
+    public void setId(String id) {this.id = id;}
+
     public void setName(String name) {
         this.name = name;
     }
@@ -66,6 +70,8 @@ public class ListOrderItem implements Parcelable { //객체 intent용 직렬화
 
 
     //getter
+    public String getId() {return id;}
+
     public String getName() {
         return name;
     }

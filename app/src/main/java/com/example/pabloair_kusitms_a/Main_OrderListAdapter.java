@@ -1,5 +1,6 @@
 package com.example.pabloair_kusitms_a;
 
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -87,6 +88,7 @@ public class Main_OrderListAdapter extends RecyclerView.Adapter<Main_OrderListAd
 
         }
 
+        //textview 설정
         void onBind(ListOrderItem item) {
             name.setText(item.getName() + "님 - ");
             serializedNumber.setText("주문번호 "+item.getSerializedNumber());
@@ -94,10 +96,7 @@ public class Main_OrderListAdapter extends RecyclerView.Adapter<Main_OrderListAd
             weight.setText("상품이동중 (중량 " + item.getWeight() + "kg)");
             takeTime.setText("예상시간 ("+ item.getTakeTime() + "분)");
 
-
-
         }
-
 
 
     }

@@ -1,6 +1,7 @@
 package com.example.pabloair_kusitms_a;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -26,16 +27,30 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 
+import org.w3c.dom.Document;
+
 import java.io.IOException;
 import java.security.acl.Permission;
+import java.util.Locale;
 
 public class Manager_Scan_Activity extends AppCompatActivity {
 
@@ -45,6 +60,11 @@ public class Manager_Scan_Activity extends AppCompatActivity {
     private BarcodeDetector barcodeDetector;
 
     DBManager dbManager;
+    FirebaseFirestore db; //fireStore 연결
+
+    private String qrCodeContents =""; //qrCode 담는 값
+    private Boolean document_OnGoing; //document - onGoing 담음
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +80,7 @@ public class Manager_Scan_Activity extends AppCompatActivity {
 
         //db매니저 생성
         dbManager = new DBManager(this);
+        db = FirebaseFirestore.getInstance();
 
 
         //카메라 권한 확인
@@ -108,6 +129,7 @@ public class Manager_Scan_Activity extends AppCompatActivity {
                 }
             });
 
+
             barcodeDetector.setProcessor(new Detector.Processor<Barcode>() {
                 @Override
                 public void release() { }
@@ -119,34 +141,76 @@ public class Manager_Scan_Activity extends AppCompatActivity {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            if (qrcode.size() != 0) {
-                                String qrCodeContents = qrcode.valueAt(0).displayValue;
+                            if (qrCodeContents != null && qrcode.size() != 0) {
+                                qrCodeContents = qrcode.valueAt(0).displayValue;
                                 Log.d("Detection", qrCodeContents);
-
-                                //서버 연동 확인
-                                Boolean checkExpire = dbManager.checkExpire(qrCodeContents);
-                                if(checkExpire == true) { //onGoing == 0
-                                    Toast toast = Toast.makeText(getApplicationContext(), "주문번호: " + qrcode.valueAt(0).displayValue +"\n 스캔 완료 되었습니다", Toast.LENGTH_SHORT);
-                                    toast.setGravity(Gravity.CENTER, Gravity.CENTER_HORIZONTAL, Gravity.CENTER_VERTICAL);
-                                    toast.show();
-                                    Log.d("Order process finished", qrCodeContents);
-                                } else {
-                                    Toast toast = Toast.makeText(getApplicationContext(), "유효하지 않은 QR코드입니다", Toast.LENGTH_SHORT);
-                                    toast.setGravity(Gravity.CENTER, Gravity.CENTER_HORIZONTAL, Gravity.CENTER_VERTICAL);
-                                    toast.show();
-                                    Log.d("Expired Order", qrCodeContents);
-                                }
+                                verifySerial(qrCodeContents);
+                                //파이어베이스 확인 & toast message
 
                             }
                         }
-                    }, 0);
+                    }, 6000);
 
+                    updateOnGoing();
                 }
             });
         }
         setAnimation();
     }
 
+    /* 함수 */
+
+    //onGoing -> true (처리 완료되지 않은 주문건)
+    private void onGoingToast() {
+        if(qrCodeContents != "") {
+            Toast toast = Toast.makeText(getApplicationContext(), "주문번호: " + qrCodeContents +"\n 스캔 완료 되었습니다", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER, Gravity.CENTER_HORIZONTAL, Gravity.CENTER_VERTICAL);
+            toast.show();
+            Log.d("Order process finished", qrCodeContents);
+        }
+    }
+
+    //onGoing -> false (처리 완료된 주문건)
+    private void expiredToast() {
+        if(qrCodeContents != "") {
+            Toast toast = Toast.makeText(getApplicationContext(), "유효하지 않은 QR코드입니다", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER, Gravity.CENTER_HORIZONTAL, Gravity.CENTER_VERTICAL);
+            toast.show();
+            Log.d("Expired Order", qrCodeContents);
+        }
+
+    }
+
+
+    //Firestore와 검증코드
+    private void verifySerial(String qrCodeContents) {
+        DocumentReference dc = db.collection("OrderDetail").document(qrCodeContents);
+        dc.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException e) {
+                if(e != null) {
+                    Log.d("Listen Failed", String.valueOf(e));
+                    return;
+                }
+                // IF the Document Exists
+                if(value != null && value.exists()) {
+                    Log.d("Current Data :", String.valueOf(value.getData()));
+                    document_OnGoing = value.getBoolean("onGoing");
+                    Log.d("document_onGoing", String.valueOf(document_OnGoing));
+
+                    if(qrCodeContents != "" && document_OnGoing.equals(true)) { //알림 후 data 수정
+                        onGoingToast();
+                    }
+                    else if (qrCodeContents !="" &&  document_OnGoing.equals(false)) {
+                        expiredToast();
+                    } else {
+                        Log.d("Current data", "null");
+                    }
+                }
+
+            }
+        });
+    }
 
     //레이어
     private void setAnimation() {
@@ -167,12 +231,24 @@ public class Manager_Scan_Activity extends AppCompatActivity {
         line.startAnimation(animation);
     }
 
-    //문 여는 코드
-    private Boolean permissionDoor(String serial) {
-        Boolean checkExpire = dbManager.checkExpire(serial);
-        if(checkExpire == true) { return true; }
-        else { return false; }
-    }
+    private void updateOnGoing() {
+        DocumentReference dc = db.collection("OrderDetail").document(qrCodeContents);
+        dc
+                .update("onGoing", false)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override //update 성공시
+                    public void onSuccess(Void unused) {
+                        Log.d("DocumentSnapShot ", "successfully update");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override //update 실패시
+                    public void onFailure(@NonNull Exception e) {
+                        Log.d("error ", "updating document");
+                    }
+                });
 
+        qrCodeContents = "";
+    }
 
 }
