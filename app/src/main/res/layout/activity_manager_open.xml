@@ -62,29 +62,35 @@
         android:id="@+id/manager_btnLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginStart="20dp"
         android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="20dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
+
+
+        <Button
             android:id="@+id/manager_btn_open"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:background="@color/white"
-            android:src="@drawable/ic_admin_open"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:background="@drawable/user_check_btn_case"
+            android:fontFamily="@font/nanumsquareeb"
+            android:text="OPEN"
+            android:textColor="@color/font_dark_gray"
+            android:textSize="20dp" />
 
-        <ImageButton
+        <Button
             android:id="@+id/manager_btn_close"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginStart="50dp"
-            android:background="@color/white"
-            android:src="@drawable/ic_admin_close"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/user_check_btn_case"
+            android:fontFamily="@font/nanumsquareeb"
+            android:text="CLOSE"
+            android:textColor="@color/font_dark_gray"
+            android:textSize="20dp" />
 
     </LinearLayout>
 

@@ -19,11 +19,14 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.SetOptions;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class Main_Order_Activity extends AppCompatActivity {
@@ -34,7 +37,8 @@ public class Main_Order_Activity extends AppCompatActivity {
     EditText nameEt, phoneEt, stationEt; //각 뷰 선언
     Button btn;
     String name, phoneNumber, station, serializedNum;
-    Boolean insert;
+    Integer weight, takeTime;
+    boolean insert;
 
     DBManager DB;
 
@@ -51,6 +55,8 @@ public class Main_Order_Activity extends AppCompatActivity {
         phoneEt = findViewById(R.id.order_phone);
         stationEt = findViewById(R.id.order_station);
 
+
+
         DB = new DBManager(this);
 
         //버튼 클릭시 객체 생성
@@ -62,6 +68,11 @@ public class Main_Order_Activity extends AppCompatActivity {
                 name = nameEt.getText().toString();
                 phoneNumber = phoneEt.getText().toString();
                 station = stationEt.getText().toString();
+
+                weight = Integer.parseInt(rndNum(9)+1);
+                Log.d("weight", rndNum(9)+1);
+                takeTime = Integer.parseInt(rndNum(59)+1);
+                Log.d("takeTime", rndNum(59)+1);
 
                 if(name.length() == 0  | phoneNumber.length() == 0 | station.length() == 0) { //모든 값이 작성이 완료 되었고, 버튼을 눌렀을때
                     Toast.makeText(Main_Order_Activity.this, "값을 모두 입력해주세요", Toast.LENGTH_SHORT).show();
@@ -81,6 +92,7 @@ public class Main_Order_Activity extends AppCompatActivity {
                     insert = DB.insertOrder(name, serializedNum, station, Integer.parseInt(rndNum(8)+1), Integer.parseInt(rndNum(59)+1), 0);
                     // 주문
                     if (insert == true){
+                        postValue();
                         Toast.makeText(Main_Order_Activity.this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(Main_Order_Activity.this, "주문이 실패했습니다.", Toast.LENGTH_SHORT).show();
@@ -149,6 +161,23 @@ public class Main_Order_Activity extends AppCompatActivity {
        return String.valueOf(randNum);
     }
 
+    public void postValue() {
+        Map<String, Object> data = new HashMap<>();
+        data.put("id", "example");
+        data.put("name", name);
+        data.put("onGoing", true);
+        data.put("station", station);
+        data.put("takeTime", takeTime);
+        data.put("weight", weight);
+
+
+        db.collection("OrderDetail").document(serializedNum)
+                .set(data, SetOptions.merge());
+//        Map<String, Object> data = new HashMap<>();
+//        data.put("onGoing", true);
+//        db.collection("OrderDetail").document("A20220907AXC03").update(data);
+//        Log.d("=======success========", "open success");
+    }
 }
 
 
