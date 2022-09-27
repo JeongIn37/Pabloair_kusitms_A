@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "390432854762",
+    "project_id": "pabloairteama",
+    "storage_bucket": "pabloairteama.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390432854762:android:b5c2786c20e467d2957d93",
+        "android_client_info": {
+          "package_name": "com.example.pabloair_kusitms_a"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "390432854762-225eqhedplb4o9c4gtg07hi1erh3dgfv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pabloair_kusitms_a",
+            "certificate_hash": "9c2df2eb97b694862943a74787ebf6e8097f99c9"
+          }
+        },
+        {
+          "client_id": "390432854762-4eedel6gvevkgvtf0r4r2frji93b46at.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pabloair_kusitms_a",
+            "certificate_hash": "5c98fd68a21dea19576ef976643f70351c4ca8d1"
+          }
+        },
+        {
+          "client_id": "390432854762-mapefk00r7fcnpnbcij1f9u711j2b7hf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgifMwcoCaCUNRpMnnf25PfDwZAblFQxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "390432854762-mapefk00r7fcnpnbcij1f9u711j2b7hf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
