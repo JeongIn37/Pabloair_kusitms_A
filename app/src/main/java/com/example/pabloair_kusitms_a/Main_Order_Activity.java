@@ -30,6 +30,7 @@ public class Main_Order_Activity extends AppCompatActivity {
 
     private static final String COLLECTION_NAME = "OrderDetail";
     private static FirebaseFirestore db;
+
     EditText nameEt, phoneEt, stationEt; //각 뷰 선언
     Button btn;
     String name, phoneNumber, station, serializedNum;
@@ -45,12 +46,12 @@ public class Main_Order_Activity extends AppCompatActivity {
         Window window = getWindow();
         window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
-        btn = (Button) findViewById(R.id.order_submit_btn);
-        nameEt = (EditText) findViewById(R.id.order_username);
-        phoneEt = (EditText) findViewById(R.id.order_phone);
-        stationEt = (EditText) findViewById(R.id.order_station);
+        btn = findViewById(R.id.order_submit_btn);
+        nameEt = findViewById(R.id.order_username);
+        phoneEt = findViewById(R.id.order_phone);
+        stationEt = findViewById(R.id.order_station);
 
-
+        DB = new DBManager(this);
 
         //버튼 클릭시 객체 생성
         btn.setOnClickListener(new View.OnClickListener() {
@@ -77,10 +78,12 @@ public class Main_Order_Activity extends AppCompatActivity {
                     Log.d("new Serial Num ", serializedNum); /*여기까지 문제 없음*/
 
                     //InnoDB에 값 넣기
-                    insert = DB.insertOrder("example", name, serializedNum, station, Integer.parseInt(rndNum(8)+1), Integer.parseInt(rndNum(59)+1), 0);
+                    insert = DB.insertOrder(name, serializedNum, station, Integer.parseInt(rndNum(8)+1), Integer.parseInt(rndNum(59)+1), 0);
                     // 주문
                     if (insert == true){
                         Toast.makeText(Main_Order_Activity.this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplication(), Main_Order_List_Activity.class);
+                        startActivity(intent);
                     } else {
                         Toast.makeText(Main_Order_Activity.this, "주문이 실패했습니다.", Toast.LENGTH_SHORT).show();
                     }
@@ -135,7 +138,6 @@ public class Main_Order_Activity extends AppCompatActivity {
     private String rndAlpha() {
         Random rnd = new Random();
         String rndAlpha = String.valueOf((char) ((int) (rnd.nextInt(26))+65));
-
         return rndAlpha;
     }
 
@@ -145,14 +147,7 @@ public class Main_Order_Activity extends AppCompatActivity {
         Random rnd = new Random();
         int randNum = rnd.nextInt(num) + 1; //1~num까지 랜덤 숫자
 
-       return String.valueOf(randNum);
+        return String.valueOf(randNum);
     }
 
 }
-
-
-
-
-
-
-
