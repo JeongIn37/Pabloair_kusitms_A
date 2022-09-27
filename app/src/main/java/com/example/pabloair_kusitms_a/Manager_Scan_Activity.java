@@ -62,6 +62,8 @@ public class Manager_Scan_Activity extends AppCompatActivity {
     DBManager dbManager;
     FirebaseFirestore db; //fireStore 연결
 
+    int codeTest = 0;
+
     private String qrCodeContents =""; //qrCode 담는 값
     private Boolean document_OnGoing; //document - onGoing 담음
 
@@ -137,23 +139,29 @@ public class Manager_Scan_Activity extends AppCompatActivity {
                 @Override
                 public void receiveDetections(@NonNull Detector.Detections<Barcode> detections) {
                     final SparseArray<Barcode> qrcode = detections.getDetectedItems();
+
                     Handler handler = new Handler(Looper.getMainLooper());
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            if (qrCodeContents != null && qrcode.size() != 0) {
-                                qrCodeContents = qrcode.valueAt(0).displayValue;
-                                Log.d("Detection", qrCodeContents);
-                                verifySerial(qrCodeContents);
-                                //파이어베이스 확인 & toast message
-
-                            }
+                            try {
+                                if (qrCodeContents != null && qrcode.size() != 0) {
+                                    qrCodeContents = qrcode.valueAt(0).displayValue;
+                                    Log.d("Detection", qrCodeContents);
+                                    verifySerial(qrCodeContents);
+                                    //파이어베이스 확인 & toast message
+                                    updateOnGoing();
+                                }
+                            } catch(Exception e) { }
                         }
-                    }, 6000);
+                    }, 3000);
 
-                    updateOnGoing();
+                    qrCodeContents ="";
+
                 }
             });
+
+            qrCodeContents ="";
         }
         setAnimation();
     }
@@ -200,6 +208,7 @@ public class Manager_Scan_Activity extends AppCompatActivity {
 
                     if(qrCodeContents != "" && document_OnGoing.equals(true)) { //알림 후 data 수정
                         onGoingToast();
+
                     }
                     else if (qrCodeContents !="" &&  document_OnGoing.equals(false)) {
                         expiredToast();
@@ -211,6 +220,8 @@ public class Manager_Scan_Activity extends AppCompatActivity {
             }
         });
     }
+
+
 
     //레이어
     private void setAnimation() {
@@ -248,7 +259,6 @@ public class Manager_Scan_Activity extends AppCompatActivity {
                     }
                 });
 
-        qrCodeContents = "";
     }
 
 }

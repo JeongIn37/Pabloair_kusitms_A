@@ -16,10 +16,24 @@
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A/app/src/main/res/layout/activity_user_check.xml" value="0.264" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A/app/src/main/res/layout/activity_user_login.xml" value="0.1" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A/app/src/main/res/layout/fragment_user_check_a.xml" value="0.23645833333333333" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/drawable/user_check_btn.xml" value="0.1" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/drawable/user_check_btn_case.xml" value="0.1" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/layout/activity_door_manage.xml" value="0.11820652173913043" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/layout/activity_main.xml" value="0.19375" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/layout/activity_main_mypage.xml" value="0.264" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/layout/activity_main_order.xml" value="0.20364741641337386" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/layout/activity_main_orderlist.xml" value="0.31567028985507245" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/layout/activity_main_search.xml" value="0.19375" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/layout/activity_manager_home.xml" value="0.11820652173913043" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/layout/activity_manager_login.xml" value="0.11614583333333334" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/layout/activity_manager_open.xml" value="0.1453125" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/layout/activity_order_list_click.xml" value="0.31567028985507245" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/layout/activity_splash.xml" value="0.23645833333333333" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/layout/activity_user_check.xml" value="0.1453125" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/layout/activity_user_login.xml" value="0.23645833333333333" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/layout/click_list_item.xml" value="0.1921875" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/layout/item_order.xml" value="0.4" />
+        <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_firebase/app/src/main/res/layout/search_item.xml" value="0.1921875" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/drawable/arrow_ongoing_blue.xml" value="0.1" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/drawable/camera_border.xml" value="0.1" />
         <entry key="..\:/workfolder/AndroidSDK/Pabloair_kusitms_A_new/app/src/main/res/drawable/elipse_blue.xml" value="0.1" />
