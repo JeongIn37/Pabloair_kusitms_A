@@ -168,7 +168,7 @@
                     android:layout_marginBottom="5dp"/>
 
                 <EditText
-                    android:id="@+id/order_address"
+                    android:id="@+id/order_station"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -219,9 +219,6 @@
                     android:text="주문서 작성"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
-
-
-
 
         </LinearLayout>
 

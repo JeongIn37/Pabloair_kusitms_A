@@ -43,7 +43,6 @@ public class DBManager extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO OrderDetail (id, name, serializedNumber, station, weight, takeTime, onGoing) VALUES ('jeongin99', '윤정인', 'A20220911B12DX', '가평 파인 포레스트', 3, 20, 0)");
         db.execSQL("INSERT INTO OrderDetail (id, name, serializedNumber, station, weight, takeTime, onGoing) VALUES ('minseo00', '신민서', 'A20220912CK782', '가평군 농협 하나로마트 자라점', 5, 40, 0)");
 
-        /*ClickItem Table*/
     }
 
     @Override
@@ -53,6 +52,33 @@ public class DBManager extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS OrderDetail");
 
     }
+
+    //오더 값 집어넣기
+    public Boolean insertOrder(String id, String name, String serializedNumber, String station, int weight, int takeTime, int onGoing){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put("id", id);
+        values.put("name",name);
+        values.put("serializedNumber", serializedNumber);
+        values.put("station", station);
+        values.put("weight", weight);
+        values.put("takeTime", takeTime);
+        values.put("onGoing", onGoing);
+
+        long result = db.insert("OrderDetail", null, values);
+        if (result == -1 ) {
+            Log.d("insertOrder: ", "null");
+            return false;
+        }
+        else {
+            Log.d("insertOrder: ", "success");
+            return true;
+        }
+
+    }
+
 
 
     public Boolean insertData(String id, String pwd, String name, String phone){
