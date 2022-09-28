@@ -20,13 +20,6 @@
 
 ## 프로토타입
 
-<div align=center> 
-<!--   <img src="https://user-images.githubusercontent.com/100370200/192705366-7d8b1531-978a-4cb5-b931-a4edb8309ec6.gif"> <img src="https://user-images.githubusercontent.com/100370200/192705370-65df9bb4-4d0f-410c-8be0-64ed165cf510.gif">
-  <br>
-   프로토타입 - 사용자              /         프로토타입- 관리자
-  </div>
-
-  <br> -->
   
   
   | <img width="300" src="https://user-images.githubusercontent.com/100370200/192705366-7d8b1531-978a-4cb5-b931-a4edb8309ec6.gif"> | <img width="300" src="https://user-images.githubusercontent.com/100370200/192705370-65df9bb4-4d0f-410c-8be0-64ed165cf510.gif"> |            
