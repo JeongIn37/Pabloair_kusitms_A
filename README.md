@@ -22,7 +22,7 @@
 
 <p align="left">
   
-  스플래시 및 
+  스플래시 및 사용자 유형 선택
   
   | <img width="150" alt="splash_화면" src="https://user-images.githubusercontent.com/100370200/192694211-c574eb8c-2413-4862-99a4-0e0bf5b09670.jpg">| <img width="150" alt="사용자_유형_선택_화면" src="https://user-images.githubusercontent.com/100370200/192695087-f41983b0-43c7-4771-acf8-cee4ecd88fb4.png"> |  <img width="150" alt="사용자_유형_선택_화면" src="https://user-images.githubusercontent.com/100370200/192695236-879946d4-97e7-4169-ae29-ec6adc295450.png">   |  <img width="150" alt="사용자_유형_선택_화면" src="https://user-images.githubusercontent.com/100370200/192695480-455d440d-27b9-4c6c-a88c-1bde7eccc128.png">   |
 | :--------: | :--------: | :------: | :-----: |
@@ -34,14 +34,14 @@
 사용자 화면
 | <img width="150" alt="사용자_홈_화면" src="https://user-images.githubusercontent.com/100370200/192696396-28ac4259-bfa5-4d08-976e-f76ca38cf514.png"> | <img width="150" alt="사용자_주문서작성" src="https://user-images.githubusercontent.com/100370200/192696459-5aba93a1-9d51-4d18-ad0a-f58be443b36d.png"> |  <img width="150" alt="사용자_주문조회" src="https://user-images.githubusercontent.com/100370200/192696513-afd5ede0-97a6-4b52-a754-ca3f8cfc11b3.png">  |  <img width="150" alt="사용자_상세조회" src="https://user-images.githubusercontent.com/100370200/192696526-2147591e-3096-405a-99d2-f62f63ef004f.png">   |      
 | :--------: | :--------: | :------: | :-----: |      
-|   홈화면  |   주문서 작성  | 주문 조회 | 주문서 상세조회 | 
+|   사용자 홈화면  |   주문서 작성  | 주문 조회 | 주문서 상세조회 | 
 
 <br>
 
 관리자 화면
-| <img width="150" alt="사용자_홈_화면" src="https://user-images.githubusercontent.com/100370200/192696396-28ac4259-bfa5-4d08-976e-f76ca38cf514.png"> | <img width="150" alt="사용자_주문서작성" src="hhttps://user-images.githubusercontent.com/100370200/192696459-5aba93a1-9d51-4d18-ad0a-f58be443b36d.png"> |  <img width="150" alt="사용자_주문조회" src="https://user-images.githubusercontent.com/100370200/192696513-afd5ede0-97a6-4b52-a754-ca3f8cfc11b3.png">  |  <img width="150" alt="사용자_상세조회" src="https://user-images.githubusercontent.com/100370200/192696526-2147591e-3096-405a-99d2-f62f63ef004f.png">   |      
+| <img width="150" alt="관리자_홈_화면" src="https://user-images.githubusercontent.com/100370200/192698011-2daa2e3e-ee3a-4261-a9e1-06f10b3daa1f.png"> | <img width="150" alt="관리자_스캔하기" src="https://user-images.githubusercontent.com/100370200/192698040-ee32950e-a9a0-4f18-90cd-f01f1e9095cd.png"> |  <img width="150" alt="관리자_로그인" src="https://user-images.githubusercontent.com/100370200/192698058-48dafbd3-39a8-4c50-9f8e-2c8d5ac32baa.png">  |  <img width="150" alt="관리자_개폐관리" src="https://user-images.githubusercontent.com/100370200/192698071-76c4561e-5cdb-47fe-8141-e2eb600fa949.png">   |      
 | :--------: | :--------: | :------: | :-----: |      
-|   홈화면  |   주문서 작성  | 주문 조회 | 주문서 상세조회 | 
+|  관리자 홈화면  |   스캔하기  | 관리자 로그인 | 개폐 관리 | 
 
 <br>
 
@@ -52,6 +52,11 @@
 
 <br>
 
+![관리자 화면 홈](https://user-images.githubusercontent.com/100370200/192698011-2daa2e3e-ee3a-4261-a9e1-06f10b3daa1f.png)
+![관리자 화면 3 스캔하기](https://user-images.githubusercontent.com/100370200/192698040-ee32950e-a9a0-4f18-90cd-f01f1e9095cd.png)
+![관리자 화면 로그인](https://user-images.githubusercontent.com/100370200/192698058-48dafbd3-39a8-4c50-9f8e-2c8d5ac32baa.png)
+
+![관리자 화면5 - 개폐관리](https://user-images.githubusercontent.com/100370200/192698071-76c4561e-5cdb-47fe-8141-e2eb600fa949.png)
 
 
 
