@@ -63,7 +63,7 @@
 큐알 생성 및 스캔
 | <img width="250" alt="주문_상세조회" src="https://user-images.githubusercontent.com/100370200/192698559-707c735d-a26e-4464-bb8b-583229e11834.png"> | <img width="250" alt="주문_QR생성" src="https://user-images.githubusercontent.com/100370200/192698601-841ef2c1-c7f7-4298-9c6d-59736dbbdd46.png"> |  <img width="250" alt="스캔_유효QR" src="https://user-images.githubusercontent.com/100370200/192698574-8014294e-ef43-41d9-b084-3a7b35aa88e9.png">  |  <img width="250" alt="스캔_만료QR" src="https://user-images.githubusercontent.com/100370200/192698580-a4c61131-7237-4749-ba4f-0eed627cb1c4.png">   |      
 | :--------: | :--------: | :------: | :-----: |      
-|   상세조회  |   큐알 생성  | 스캔-유효 QR코드 | 스캔-만료 QR코드 | 
+|   주문 상세조회  |   큐알 생성  | 스캔-유효 QR코드 | 스캔-만료 QR코드 | 
 
 <br>
 
