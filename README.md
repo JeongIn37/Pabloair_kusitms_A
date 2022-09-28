@@ -46,18 +46,17 @@
 <br>
 
 큐알 생성 및 스캔
-| <img width="150" alt="사용자_홈_화면" src="https://user-images.githubusercontent.com/100370200/192696396-28ac4259-bfa5-4d08-976e-f76ca38cf514.png"> | <img width="150" alt="사용자_주문서작성" src="hhttps://user-images.githubusercontent.com/100370200/192696459-5aba93a1-9d51-4d18-ad0a-f58be443b36d.png"> |  <img width="150" alt="사용자_주문조회" src="https://user-images.githubusercontent.com/100370200/192696513-afd5ede0-97a6-4b52-a754-ca3f8cfc11b3.png">  |  <img width="150" alt="사용자_상세조회" src="https://user-images.githubusercontent.com/100370200/192696526-2147591e-3096-405a-99d2-f62f63ef004f.png">   |      
+| <img width="150" alt="주문_상세조회" src="https://user-images.githubusercontent.com/100370200/192698559-707c735d-a26e-4464-bb8b-583229e11834.png"> | <img width="150" alt="주문_QR생성" src="https://user-images.githubusercontent.com/100370200/192698601-841ef2c1-c7f7-4298-9c6d-59736dbbdd46.png"> |  <img width="150" alt="스캔_유효QR" src="https://user-images.githubusercontent.com/100370200/192698574-8014294e-ef43-41d9-b084-3a7b35aa88e9.png">  |  <img width="150" alt="스캔_만료QR" src="https://user-images.githubusercontent.com/100370200/192698580-a4c61131-7237-4749-ba4f-0eed627cb1c4.png">   |      
 | :--------: | :--------: | :------: | :-----: |      
-|   홈화면  |   주문서 작성  | 주문 조회 | 주문서 상세조회 | 
+|   상세조회  |   큐알 생성  | 스캔-유효 QR코드 | 스캔-만료 QR코드 | 
 
 <br>
 
-![관리자 화면 홈](https://user-images.githubusercontent.com/100370200/192698011-2daa2e3e-ee3a-4261-a9e1-06f10b3daa1f.png)
-![관리자 화면 3 스캔하기](https://user-images.githubusercontent.com/100370200/192698040-ee32950e-a9a0-4f18-90cd-f01f1e9095cd.png)
-![관리자 화면 로그인](https://user-images.githubusercontent.com/100370200/192698058-48dafbd3-39a8-4c50-9f8e-2c8d5ac32baa.png)
+![주문 조회 상세 클릭](https://user-images.githubusercontent.com/100370200/192698559-707c735d-a26e-4464-bb8b-583229e11834.png)
+![QR코드생성_화면](https://user-images.githubusercontent.com/100370200/192698601-841ef2c1-c7f7-4298-9c6d-59736dbbdd46.png)
 
-![관리자 화면5 - 개폐관리](https://user-images.githubusercontent.com/100370200/192698071-76c4561e-5cdb-47fe-8141-e2eb600fa949.png)
-
+![관리자 화면 4_유효스캔](https://user-images.githubusercontent.com/100370200/192698574-8014294e-ef43-41d9-b084-3a7b35aa88e9.png)
+![관리자 화면 5 _만료스캔](https://user-images.githubusercontent.com/100370200/192698580-a4c61131-7237-4749-ba4f-0eed627cb1c4.png)
 
 
 
