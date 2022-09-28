@@ -18,16 +18,16 @@
 
 
 ## 프로토타입
+![사용자 유형 선택 화면_선택시_관리자](https://user-images.githubusercontent.com/100370200/192695480-455d440d-27b9-4c6c-a88c-1bde7eccc128.png)
+
+![사용자 유형 선택 화면_선택시](https://user-images.githubusercontent.com/100370200/192695236-879946d4-97e7-4169-ae29-ec6adc295450.png)
 
 <p align="left">
-<img width="180" alt="splash_화면" src="https://user-images.githubusercontent.com/100370200/192694211-c574eb8c-2413-4862-99a4-0e0bf5b09670.jpg">
-  </p>
- <img width="180" alt="splash_화면" src="https://user-images.githubusercontent.com/100370200/192694211-c574eb8c-2413-4862-99a4-0e0bf5b09670.jpg">
-  <img width="180" alt="splash_화면" src="https://user-images.githubusercontent.com/100370200/192694211-c574eb8c-2413-4862-99a4-0e0bf5b09670.jpg">
+
   
-  | <img width="180" alt="splash_화면" src="https://user-images.githubusercontent.com/100370200/192694211-c574eb8c-2413-4862-99a4-0e0bf5b09670.jpg">| TypeScript |  React   |  Node   |
+  | <img width="150" alt="splash_화면" src="https://user-images.githubusercontent.com/100370200/192694211-c574eb8c-2413-4862-99a4-0e0bf5b09670.jpg">| <img width="150" alt="사용자_유형_선택_화면" src="https://user-images.githubusercontent.com/100370200/192695087-f41983b0-43c7-4771-acf8-cee4ecd88fb4.png"> |  <img width="150" alt="사용자_유형_선택_화면" src="https://user-images.githubusercontent.com/100370200/192695236-879946d4-97e7-4169-ae29-ec6adc295450.png">   |  <img width="150" alt="사용자_유형_선택_화면" src="https://user-images.githubusercontent.com/100370200/192695480-455d440d-27b9-4c6c-a88c-1bde7eccc128.png">   |
 | :--------: | :--------: | :------: | :-----: |
-|   ![js]    |   ![ts]    | ![react] | ![node] |
+|   Splash 화면    |   사용자유형 선택화면    | 유형선택-사용자 | 유형선택-관리자 |
 
   
 </p>
