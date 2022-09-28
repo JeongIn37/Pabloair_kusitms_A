@@ -1,7 +1,7 @@
 # Pabloair_kusitms_A
 파블로항공 기업프로젝트 with 큐시즘 26th
 
-<p align="leght">
+<p align="center">
   <br>
   <img width="1000" alt="ppt_2" src="https://user-images.githubusercontent.com/108562467/192685200-0075f84a-20cf-4497-815c-e7dc53d4e6b1.png">
   <br>
