@@ -21,9 +21,6 @@
 ## 프로토타입
 
 <p align="left">
-  ![주문서 작성 화면_성공](https://user-images.githubusercontent.com/100370200/192699719-f4097bd3-076f-4c5d-b69f-4baa5ffda628.png)
-
-
 
   
   스플래시 및 사용자 유형 선택
