@@ -19,7 +19,7 @@
 
 ## 프로토타입
 
-<p align="leght">
+<p align="left">
 <img width="180" alt="splash_화면" src="https://user-images.githubusercontent.com/100370200/192694211-c574eb8c-2413-4862-99a4-0e0bf5b09670.jpg">
   </p>
  <img width="180" alt="splash_화면" src="https://user-images.githubusercontent.com/100370200/192694211-c574eb8c-2413-4862-99a4-0e0bf5b09670.jpg">
