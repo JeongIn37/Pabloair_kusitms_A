@@ -20,9 +20,24 @@
 
 ## 프로토타입
 
-<p align="left">
 
+
+
+
+
+
+
+<p align="left">
   
+  사용자 입장 프로토 타입
+  <img src="https://user-images.githubusercontent.com/100370200/192704862-6128b262-bd0e-4ba5-b774-3b4ae6b66b10.mp4">
+  <br>
+  
+  관리자 입장 프로토 타입
+  <img src="https://user-images.githubusercontent.com/100370200/192705011-c01b274a-1af2-42e2-9362-91b8decfa34b.mp4">
+  <br>
+
+ 
   스플래시 및 사용자 유형 선택
   
   | <img width="200" alt="splash_화면" src="https://user-images.githubusercontent.com/100370200/192694211-c574eb8c-2413-4862-99a4-0e0bf5b09670.jpg">| <img width="200" alt="사용자_유형_선택_화면" src="https://user-images.githubusercontent.com/100370200/192695087-f41983b0-43c7-4771-acf8-cee4ecd88fb4.png"> |  <img width="200" alt="선택_사용자" src="https://user-images.githubusercontent.com/100370200/192695236-879946d4-97e7-4169-ae29-ec6adc295450.png">   |  <img width="200" alt="선택_관리자" src="https://user-images.githubusercontent.com/100370200/192695480-455d440d-27b9-4c6c-a88c-1bde7eccc128.png">   |  <img width="200" alt="회원가입_화면" src="https://user-images.githubusercontent.com/100370200/192699278-d6e55afb-5741-4432-8ba2-8529c73d2a18.png">   |
