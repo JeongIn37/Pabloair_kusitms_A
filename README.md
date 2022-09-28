@@ -21,12 +21,7 @@
 ## 프로토타입
 
 <div align=center> 
-  사용자 입장 프로토 타입
-  <img src="https://user-images.githubusercontent.com/100370200/192705366-7d8b1531-978a-4cb5-b931-a4edb8309ec6.gif">
- 
-  관리자 입장 프로토 타입
-  <img src="https://user-images.githubusercontent.com/100370200/192705370-65df9bb4-4d0f-410c-8be0-64ed165cf510.gif">
-  <br>
+  <img src="https://user-images.githubusercontent.com/100370200/192705366-7d8b1531-978a-4cb5-b931-a4edb8309ec6.gif"> <img src="https://user-images.githubusercontent.com/100370200/192705370-65df9bb4-4d0f-410c-8be0-64ed165cf510.gif">
   </div>
 
   <br>
