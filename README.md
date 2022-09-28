@@ -3,24 +3,27 @@
 
 <p align="center">
   <br>
-  <img width="1300" alt="ppt_2" src="https://user-images.githubusercontent.com/108562467/192685200-0075f84a-20cf-4497-815c-e7dc53d4e6b1.png">
+  <img width="1000" alt="ppt_2" src="https://user-images.githubusercontent.com/108562467/192685200-0075f84a-20cf-4497-815c-e7dc53d4e6b1.png">
   <br>
 </p>
 
-
+<br>
+<br>
 ## 정보구조도
 
 <p align="center">
-<img width="1300" alt="큐시즘_파블로항공_기프" src="https://user-images.githubusercontent.com/108562467/192683827-32fd088f-209b-4e62-a7f2-8e8f842b229a.png">
+<img width="1000" alt="큐시즘_파블로항공_기프" src="https://user-images.githubusercontent.com/108562467/192683827-32fd088f-209b-4e62-a7f2-8e8f842b229a.png">
 </p>
+<br>
 <br>
 
 
 ## 프로젝트 전체 모식도
 
 <p align="center">
-<img width="1662" alt="큐시즘_모식도" src="https://user-images.githubusercontent.com/108562467/192684537-2626893b-5e56-4740-8627-46122ecfc3da.png">
+<img width="1000" alt="큐시즘_모식도" src="https://user-images.githubusercontent.com/108562467/192684537-2626893b-5e56-4740-8627-46122ecfc3da.png">
 </p>
+<br>
 <br>
 
 
