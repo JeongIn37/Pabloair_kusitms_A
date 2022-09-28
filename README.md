@@ -20,12 +20,14 @@
 
 ## 프로토타입
   
-  <p align="center">
-    | <img width="400" src="https://user-images.githubusercontent.com/100370200/192705366-7d8b1531-978a-4cb5-b931-a4edb8309ec6.gif"> |  <img width="400" src="https://user-images.githubusercontent.com/100370200/192705370-65df9bb4-4d0f-410c-8be0-64ed165cf510.gif">  |            
-| :--------: | :--------: |        
-|   프로토타입-사용자    |   프로토타입-관리자   |
   
-  </p>
+  <p align="left">
+  
+  | <img width="400" src="https://user-images.githubusercontent.com/100370200/192705366-7d8b1531-978a-4cb5-b931-a4edb8309ec6.gif"> | <img width="400" src="https://user-images.githubusercontent.com/100370200/192705370-65df9bb4-4d0f-410c-8be0-64ed165cf510.gif"> |            
+| :--------: | :--------: |        
+|   프로토타입-사용자   |   프로토타입-관리자    |
+  
+
   
   </br>
 
@@ -39,7 +41,7 @@
   
  
 
-<p align="left">
+
  
   스플래시 및 사용자 유형 선택
   
