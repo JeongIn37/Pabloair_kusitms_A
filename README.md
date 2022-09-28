@@ -20,7 +20,7 @@
 ## 기능명세서
 
 <p align="leght">
-<img width="700" alt="큐시즘_파블로항공_기프" src="https://user-images.githubusercontent.com/108562467/192683827-32fd088f-209b-4e62-a7f2-8e8f842b229a.png">
+<img width="700" alt="기능명세서" src="https://user-images.githubusercontent.com/108562467/192687146-7ee78927-2ce8-4787-8514-983a56b18bc7.png">
 </p>
 <br>
 
