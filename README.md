@@ -68,13 +68,6 @@
 <br>
 
 
-![관리자 화면 홈](https://user-images.githubusercontent.com/100370200/192715119-caf2e4a7-0c58-4a46-bb7b-d2619699cc6a.png)
-![관리자 화면 로그인](https://user-images.githubusercontent.com/100370200/192715130-a8d4df8d-1a2d-41fa-9704-514f26c04bd2.png)
-![관리자 화면5 - 개폐관리](https://user-images.githubusercontent.com/100370200/192715142-d49f8144-58c7-4f70-8cab-ee82b6115af0.png)
-
-
-
-
 ## 기능명세서
 
 <p align="center">
