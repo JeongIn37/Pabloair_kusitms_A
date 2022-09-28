@@ -20,21 +20,14 @@
 
 ## 프로토타입
 
-
-
-
-
-
-
-
 <p align="left">
-  
+
   사용자 입장 프로토 타입
-  <img src="https://user-images.githubusercontent.com/100370200/192704862-6128b262-bd0e-4ba5-b774-3b4ae6b66b10.mp4">
+  <img src="https://user-images.githubusercontent.com/100370200/192705366-7d8b1531-978a-4cb5-b931-a4edb8309ec6.gif">
   <br>
   
   관리자 입장 프로토 타입
-  <img src="https://user-images.githubusercontent.com/100370200/192705011-c01b274a-1af2-42e2-9362-91b8decfa34b.mp4">
+  <img src="https://user-images.githubusercontent.com/100370200/192705370-65df9bb4-4d0f-410c-8be0-64ed165cf510.gif">
   <br>
 
  
