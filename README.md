@@ -9,14 +9,6 @@
 <br>
 
 
-## 정보구조도
-
-<p align="leght">
-<img width="700" alt="큐시즘_파블로항공_기프" src="https://user-images.githubusercontent.com/108562467/192683827-32fd088f-209b-4e62-a7f2-8e8f842b229a.png">
-</p>
-<br>
-
-
 ## 프로젝트 전체 모식도
 
 <p align="leght">
@@ -28,7 +20,7 @@
 ## 기능명세서
 
 <p align="leght">
-  <imp width="700" alt="기능명세서" src="https://user-images.githubusercontent.com/108562467/192686260-584f04d5-e2b2-47c4-aefb-7783be7285d4.png">
+<img width="700" alt="큐시즘_파블로항공_기프" src="https://user-images.githubusercontent.com/108562467/192683827-32fd088f-209b-4e62-a7f2-8e8f842b229a.png">
 </p>
 <br>
 
@@ -36,6 +28,9 @@
 ## DataBase 설계도
 
 <p align="leght">
+![DB](https://user-images.githubusercontent.com/108562467/192686803-afd7d5dc-0d98-4fed-89a4-a971115b327c.png)
+![DB](https://user-images.githubusercontent.com/108562467/192686818-8cd51bfd-4057-4161-980e-cdb1aa3eaf5f.png)
+![DB](https://user-images.githubusercontent.com/108562467/192686840-7d9d507f-830d-4039-964f-866a65aaa99a.png)
 
 </p>
 <br>
