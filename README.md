@@ -81,6 +81,15 @@
 <br>
 
 
+## 안드로이드 주요 함수
+
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/100370200/192711307-f639fca8-5d6e-4a89-99de-abfa74554a32.jpg">
+</p>
+<br>
+ 
+
 ## 기술 스택
 <div align=center> 
   <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"> 
