@@ -54,7 +54,7 @@
 <br>
 
 관리자 화면
-| <img width="250" alt="관리자_홈_화면" src="https://user-images.githubusercontent.com/100370200/192698011-2daa2e3e-ee3a-4261-a9e1-06f10b3daa1f.png"> | <img width="250" alt="관리자_스캔하기" src="https://user-images.githubusercontent.com/100370200/192698040-ee32950e-a9a0-4f18-90cd-f01f1e9095cd.png"> |  <img width="250" alt="관리자_로그인" src="https://user-images.githubusercontent.com/100370200/192698058-48dafbd3-39a8-4c50-9f8e-2c8d5ac32baa.png">  |  <img width="250" alt="관리자_개폐관리" src="https://user-images.githubusercontent.com/100370200/192698071-76c4561e-5cdb-47fe-8141-e2eb600fa949.png">   |      
+| <img width="250" alt="관리자_홈_화면" src="https://user-images.githubusercontent.com/100370200/192715119-caf2e4a7-0c58-4a46-bb7b-d2619699cc6a.png"> | <img width="250" alt="관리자_스캔하기" src="https://user-images.githubusercontent.com/100370200/192698040-ee32950e-a9a0-4f18-90cd-f01f1e9095cd.png"> |  <img width="250" alt="관리자_로그인" src="https://user-images.githubusercontent.com/100370200/192715130-a8d4df8d-1a2d-41fa-9704-514f26c04bd2.png">  |  <img width="250" alt="관리자_개폐관리" src="https://user-images.githubusercontent.com/100370200/192715142-d49f8144-58c7-4f70-8cab-ee82b6115af0.png">   |      
 | :--------: | :--------: | :------: | :-----: |      
 |  관리자 홈화면  |   스캔하기  | 관리자 로그인 | 개폐 관리 | 
 
@@ -66,6 +66,11 @@
 |   주문 상세조회  |   큐알 생성  | 스캔-유효 QR코드 | 스캔-만료 QR코드 | 
 
 <br>
+
+
+![관리자 화면 홈](https://user-images.githubusercontent.com/100370200/192715119-caf2e4a7-0c58-4a46-bb7b-d2619699cc6a.png)
+![관리자 화면 로그인](https://user-images.githubusercontent.com/100370200/192715130-a8d4df8d-1a2d-41fa-9704-514f26c04bd2.png)
+![관리자 화면5 - 개폐관리](https://user-images.githubusercontent.com/100370200/192715142-d49f8144-58c7-4f70-8cab-ee82b6115af0.png)
 
 
 
