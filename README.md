@@ -20,7 +20,7 @@
 ## 프로토타입
 
 <p align="leght">
-  <img width="700" alt="DB" src="">
+  
 </p>
 <br>
 
@@ -35,8 +35,8 @@
 
 ## 기술 스택
 
-|    Java    | AndroidStudio |  Firebase  |  Python   |
-| :--------: | :--------: | :------: | :-----: |
-|   ![jv]    |   ![ts]    | ![react] | ![node] |
+|     Java     | AndroidStudio |   Firebase   |    Python    |
+| :----------: | :-----------: | :----------: | :----------: |
+
 
 <br>
