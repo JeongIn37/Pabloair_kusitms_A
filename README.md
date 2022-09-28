@@ -1,9 +1,10 @@
 # Pabloair_kusitms_A
-파블로항공 기업프로젝트_큐시즘 26th
+파블로항공 기업프로젝트 with 큐시즘 26th
+![ppt_2](https://user-images.githubusercontent.com/108562467/192685200-0075f84a-20cf-4497-815c-e7dc53d4e6b1.png)
 
 <p align="center">
   <br>
-  ![ppt_2](https://user-images.githubusercontent.com/108562467/192683877-a9da8fa7-0149-4203-94a3-20ebe3e80eea.png)
+  <img width="1830" alt="ppt_2" src="https://user-images.githubusercontent.com/108562467/192685200-0075f84a-20cf-4497-815c-e7dc53d4e6b1.png">
   <br>
 </p>
 
