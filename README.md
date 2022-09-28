@@ -11,7 +11,7 @@
 
 ## 프로젝트 전체 모식도
 
-<p align="leght">
+<p align="center">
 <img width="700" alt="큐시즘_모식도" src="https://user-images.githubusercontent.com/108562467/192684537-2626893b-5e56-4740-8627-46122ecfc3da.png">
 </p>
 <br>
@@ -27,7 +27,7 @@
 
 ## 기능명세서
 
-<p align="leght">
+<p align="center">
 <img width="700" alt="기능명세서" src="https://user-images.githubusercontent.com/108562467/192687146-7ee78927-2ce8-4787-8514-983a56b18bc7.png">
 </p>
 <br>
