@@ -17,18 +17,18 @@
 <br>
 
 
-## 기능명세서
+## 프로토타입
 
 <p align="leght">
-<img width="700" alt="기능명세서" src="https://user-images.githubusercontent.com/108562467/192687146-7ee78927-2ce8-4787-8514-983a56b18bc7.png">
+  <img width="700" alt="DB" src="">
 </p>
 <br>
 
 
-## DataBase 설계도
+## 기능명세서
 
 <p align="leght">
-  <img width="700" alt="DB" src="https://user-images.githubusercontent.com/108562467/192686840-7d9d507f-830d-4039-964f-866a65aaa99a.png">
+<img width="700" alt="기능명세서" src="https://user-images.githubusercontent.com/108562467/192687146-7ee78927-2ce8-4787-8514-983a56b18bc7.png">
 </p>
 <br>
 
