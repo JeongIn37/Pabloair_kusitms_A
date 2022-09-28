@@ -3,7 +3,7 @@
 
 <p align="leght">
   <br>
-  <img width="700" alt="ppt_2" src="https://user-images.githubusercontent.com/108562467/192685200-0075f84a-20cf-4497-815c-e7dc53d4e6b1.png">
+  <img width="1000" alt="ppt_2" src="https://user-images.githubusercontent.com/108562467/192685200-0075f84a-20cf-4497-815c-e7dc53d4e6b1.png">
   <br>
 </p>
 <br>
